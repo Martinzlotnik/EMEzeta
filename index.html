@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%231A1714%27/%3E%3Ctext x=%276%27 y=%2730%27 font-family=%27Georgia,serif%27 font-size=%2724%27 fill=%27%23FBF6EF%27%3EEME%3C/text%3E%3Ctext x=%2716%27 y=%2754%27 font-family=%27Georgia,serif%27 font-style=%27italic%27 font-size=%2724%27 fill=%27%23E8A87C%27%3Ezeta%3C/text%3E%3C/svg%3E">
+<title>Martín Zlotnik · Research</title>
+<meta name="description" content="Antropólogo y researcher estratégico. Research cualitativo y cuantitativo para producto, estrategia y negocio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: cálido, editorial, seguro; un antropólogo que traduce personas en decisiones.
+   IDEA: un cuaderno de campo ordenado: papel claro, tinta negra, etiquetas terrosas.
+   PICTURE: tipografía grande en el hero; los números viven dentro de cada caso.
+   COLOUR and TYPE: siempre claro. Papel crema, tinta casi negra, pastillas terrosas (oliva, arcilla, arena, salvia, malva, piedra). Inter Tight + Inter.
+   LAYOUT: una sola página con anclas; cada caso abre su propia vista (#caso-...). */
+:root{color-scheme:light;--disp:"EB Garamond",Garamond,"Times New Roman",serif;
+--bg:#FAF5EE;--bg2:#F3EBE0;--card:#FFFDF9;
+--ink:#1A1714;--mute:#615A52;--line:#E6DCCF;
+--acc:#A0522D;
+--est-b:#ECECD2;--est-f:#575B22;
+--seg-b:#EFDDE2;--seg-f:#7A3E55;
+--dis-b:#F2E4CC;--dis-f:#7E5A1E;
+--eva-b:#DFE8D9;--eva-f:#3F6140;
+--met-b:#F5DCCB;--met-f:#9A4A26;
+--lid-b:#E8E3DB;--lid-f:#4F4A43}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;background:#FAF5EE}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,"Helvetica Neue",Arial,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:-.01em;text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,16px)}
+.band{padding:clamp(48px,7vw,104px) 0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:transparent;transition:background .3s,box-shadow .3s}
+header.mid{background:rgba(16,11,7,.72);backdrop-filter:blur(12px)}
+header.solid{background:rgba(250,245,238,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+header:not(.solid) .logo{color:#FBF6EF}header:not(.solid) .logo small{color:rgba(251,246,239,.75)}
+header:not(.solid) .lang button{color:rgba(251,246,239,.6)}header:not(.solid) .lang button[aria-pressed=true]{color:#fff}
+#case{padding-top:110px!important}
+header:not(.solid) nav .pill,.herowrap.dk .fr .pill{background:transparent;color:#FBF6EF;box-shadow:inset 0 0 0 1px rgba(251,246,239,.55);transition:background .2s}
+header:not(.solid) nav .pill:hover,.herowrap.dk .fr .pill:hover{background:rgba(251,246,239,.14)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.logo{font-family:var(--disp);font-weight:600;font-size:20px;line-height:1;letter-spacing:-.01em;text-decoration:none}
+.mark{display:block;font:400 28px/.86 "DM Serif Display",Georgia,serif;letter-spacing:.01em}.mark span{display:block}.mark i{display:block;font-style:italic;padding-left:.62em;color:var(--acc)}
+header:not(.solid) .mark i{color:#E8A87C}
+.logo small{display:block;font:500 13px Inter,Arial,sans-serif;color:var(--mute);letter-spacing:0;margin-top:8px}
+nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;min-height:36px;padding:6px 14px;border-radius:999px;text-decoration:none;font-size:15px;border:0;white-space:nowrap}
+.p-est{background:var(--est-b);color:var(--est-f)}.p-seg{background:var(--seg-b);color:var(--seg-f)}.p-dis{background:var(--dis-b);color:var(--dis-f)}
+.p-eva{background:var(--eva-b);color:var(--eva-f)}.p-met{background:var(--met-b);color:var(--met-f)}.p-lid{background:var(--lid-b);color:var(--lid-f)}
+.lang{display:flex;gap:2px;margin-inline-start:6px}
+.lang button{background:none;border:0;padding:8px 6px;min-height:36px;font-size:14px;color:var(--mute)}
+.lang button[aria-pressed=true]{color:var(--ink);font-weight:600}
+
+/* hero */
+.hero{padding-block:clamp(56px,9vw,128px) clamp(32px,5vw,64px)}
+.hero h1{font-size:clamp(34px,4.15vw,54px);line-height:1.04;margin:0 0 40px;text-wrap:wrap;text-align:justify;hyphens:none}
+.hero h1 span{display:block}.hero h1 .v{color:var(--acc);margin-top:.15em}
+@media(max-width:600px){.hero h1{text-align:left}}
+@media(min-width:901px){.hero h1 span:first-child{text-align-last:justify}}
+.hero p{font-size:clamp(19px,1.7vw,23px);line-height:1.5;color:var(--mute);max-width:none;margin:0}
+.links{display:flex;gap:20px;flex-wrap:wrap;font-size:16px}
+.links a{text-underline-offset:4px}
+.facts{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;border-top:1px solid var(--line);padding-block:18px;font-size:15px;color:var(--mute)}
+.fl{display:flex;flex-wrap:wrap;gap:10px 32px}.fr{display:flex;gap:8px;flex-wrap:wrap}
+.facts b{color:var(--ink);font-weight:600}
+
+/* sections */
+.kick{font-size:15px;color:var(--mute);margin:0 0 10px}
+h2{font-size:clamp(30px,3.6vw,46px);line-height:1.08;margin:0 0 20px}
+.lead{font-size:18px;color:var(--mute);max-width:60ch;margin:0 0 40px}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.what{background:var(--card);border-radius:20px;padding:28px}
+.what h3{font-size:22px;margin:14px 0 10px;line-height:1.2}
+.what p{margin:0;color:var(--mute)}
+.alt{background:var(--bg2)}
+
+/* filters + cards */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.filters button{border:1px solid var(--line);background:transparent;min-height:40px}
+.filters button[aria-pressed=true]{border-color:transparent;box-shadow:inset 0 0 0 2px currentColor}
+.filters button.all[aria-pressed=true]{background:var(--ink);color:var(--bg);box-shadow:none}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{display:flex;flex-direction:column;background:var(--card);border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .top{padding:26px 28px 22px;display:flex;align-items:flex-end;gap:16px;position:relative;aspect-ratio:16/9;background:#2a2018 var(--img) center/cover;color:#FBF6EF!important}
+.card .top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,9,0) 35%,rgba(20,14,9,.72))}
+.card .top>*{position:relative}
+.card:hover .top{background-size:104%}.card .top{transition:background-size .5s}
+.card .top b{font:500 clamp(40px,5vw,60px)/.95 var(--disp);letter-spacing:-.03em;flex:none}
+.card .top span{font-size:15px;line-height:1.35;max-width:26ch}
+.card .bd{padding:22px 28px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:24px;line-height:1.15;margin:0}
+.card p{margin:0;color:var(--mute);font-size:15.5px}
+.meta{font-size:14px;color:var(--mute)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.tags .pill{min-height:28px;padding:3px 11px;font-size:13px}
+.more{margin-top:4px;font-weight:500;font-size:15px}
+.arch{margin:0}
+.arch+.arch summary{border-top:0}
+.labin{padding:40px 0 16px}
+.labin h2{font-size:clamp(26px,3vw,36px)}
+.arch h3{font-size:26px;margin:0}
+.arch summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.arch summary::-webkit-details-marker{display:none}
+.arch summary:hover h3{color:var(--acc)}
+.tog{width:40px;height:40px;border-radius:50%;background:var(--bg2);position:relative;flex:none}
+.tog::before,.tog::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .25s}
+.tog::after{transform:translate(-50%,-50%) rotate(90deg)}
+.arch[open] .tog::after{transform:translate(-50%,-50%) rotate(0)}
+.era{margin-top:28px}
+.era h4{font:500 15px Inter,Arial,sans-serif;color:var(--mute);margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:110px minmax(0,1fr) 170px;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.row .y{font-size:14px;color:var(--mute)}
+.row strong{display:block;font:500 18px/1.3 var(--disp);margin-bottom:4px}
+.row p{margin:0;color:var(--mute);font-size:15px}
+.row .pill{min-height:28px;padding:3px 11px;font-size:13px;justify-self:end;white-space:normal;text-align:center}
+.hide{display:none!important}
+
+/* process + lab */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.step{border-top:2px solid var(--ink);padding-top:18px}
+.step h3{font-size:20px;margin:0 0 8px;line-height:1.2}
+.step p{margin:0;color:var(--mute);font-size:15.5px}
+.lab{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.flow{display:grid;gap:10px}
+.node{background:var(--card);border-radius:16px;padding:16px 20px}
+.node small{display:block;font-size:13px;color:var(--mute);margin-bottom:2px}
+.node b{font:500 18px/1.3 var(--disp)}
+.node.ag{background:var(--eva-b);color:var(--eva-f)}
+.node.ag small{color:inherit;opacity:.8}
+.arrow{justify-self:center;color:var(--mute);font-size:18px;line-height:1}
+
+/* about + contact */
+.about{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.photo{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--dis-b);display:grid;place-items:center;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo .ini{font:500 64px var(--disp);color:var(--dis-f)}
+.about p{font-size:18px;max-width:none}
+.bio p{margin:0 0 18px;line-height:1.65}.bio p:first-child{font:400 clamp(21px,1.9vw,25px)/1.45 var(--disp);color:var(--ink)}.bio p+p{color:var(--mute)}
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.edu div{border-top:1px solid var(--line);padding-top:12px;font-size:15px;color:var(--mute)}
+.edu b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.contact h2{font-size:clamp(28px,3.5vw,50px);line-height:1.15;max-width:none;text-wrap:wrap}
+.contact h2 span{display:block}.contact h2 .v{color:var(--acc)}
+.cline{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:28px 0 0}
+.contact{padding-bottom:clamp(40px,5vw,64px)}
+.mail{font:500 clamp(20px,2.4vw,28px) var(--disp);text-decoration:underline;text-underline-offset:6px;overflow-wrap:anywhere}
+.btn{min-height:44px;padding:10px 20px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;font-size:15px;text-decoration:none;display:inline-flex;align-items:center}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.note{border:1.5px solid var(--acc);color:var(--acc);border-radius:999px;padding:10px 18px;display:inline-block;font-size:15px}
+footer{padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+
+/* case view */
+#case{padding-block:clamp(28px,5vw,56px) 80px}
+.back{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:15px;color:var(--mute)}
+.ch{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:end;margin:18px 0 36px}
+.ch h1{font-size:clamp(36px,5vw,64px);line-height:1.04;margin:14px 0 18px}
+.ch p.hk{font-size:19px;color:var(--mute);margin:0;max-width:56ch}
+.bigstat{border-radius:24px;padding:28px}
+.bigstat b{display:block;font:500 clamp(56px,7vw,92px)/.9 var(--disp);letter-spacing:-.04em;margin-bottom:12px}
+.bigstat span{font-size:17px;line-height:1.4}
+.mgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-block:1px solid var(--line);margin-bottom:48px}
+.mgrid div{padding:16px 16px 16px 0;font-size:15px}
+.mgrid small{display:block;color:var(--mute);font-size:13px;margin-bottom:2px}
+.sec{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;padding:36px 0;border-top:1px solid var(--line)}
+.sec>h2{font-size:24px;margin:0;line-height:1.2}
+.sec>div>p{margin:0;font-size:18px;max-width:64ch}
+ol.did{margin:0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:d}
+ol.did li{counter-increment:d;display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;font-size:17px}
+ol.did li::before{content:counter(d);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:600;background:var(--bg2)}
+.finds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.find{background:var(--card);border-radius:18px;padding:22px}
+.find h3{font-size:19px;margin:0 0 8px;line-height:1.25}
+.find p{margin:0;color:var(--mute);font-size:15.5px}
+.quote{font:400 clamp(24px,3vw,34px)/1.25 var(--disp);letter-spacing:-.01em;margin:0;max-width:30ch}
+.quote+cite{display:block;margin-top:12px;font-style:normal;color:var(--mute);font-size:15px}
+.impact{border-radius:22px;padding:28px}
+.impact p{margin:0;font-size:18px;max-width:68ch}
+.nextc{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px}
+
+/* visuals */
+.vis{background:var(--card);border-radius:22px;padding:clamp(20px,3vw,32px)}
+.vis h3{font-size:20px;margin:0 0 4px}
+.vis .sub{color:var(--mute);font-size:15px;margin:0 0 20px}
+.stack{display:flex;height:56px;border-radius:12px;overflow:hidden;margin-bottom:20px}
+.stack div{display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden}
+.sc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.sc div{border-radius:16px;padding:16px;font-size:14.5px;line-height:1.4}
+.sc b{display:block;font:500 28px/1 var(--disp);margin:6px 0 8px}
+.sc strong{display:block;font-size:16px}
+.bars{display:grid;gap:14px}
+.bar{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:15px}
+.bar .tr{height:16px;border-radius:99px;background:var(--bg2);overflow:hidden}
+.bar .tr i{display:block;height:100%;border-radius:99px}
+.bar em{font-style:normal;text-align:right;font-weight:600;white-space:nowrap}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.two>div{border-radius:16px;padding:20px}
+.two h4{margin:0 0 10px;font:500 19px var(--disp)}
+.two dl{margin:0;display:grid;gap:8px;font-size:15px}
+.two dt{font-size:13px;opacity:.75}.two dd{margin:0}
+.jr{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.jr div{border-radius:16px;padding:16px;background:var(--bg2);font-size:14.5px;line-height:1.4}
+.jr strong{display:block;font:500 17px var(--disp);margin-bottom:8px}
+.jr q{display:block;color:var(--met-f);margin-bottom:8px;quotes:none}
+.tl{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.tl div{border-radius:16px;padding:16px;font-size:14.5px;line-height:1.4}
+.tl b{display:block;font:500 24px/1 var(--disp);margin:8px 0}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14.5px}
+.chain span{background:var(--bg2);border-radius:99px;padding:8px 14px}
+.chain i{font-style:normal;color:var(--mute)}
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.lights div{border-radius:16px;padding:16px;font-size:14.5px;background:var(--bg2)}
+.lights strong{display:flex;align-items:center;gap:8px;font:500 17px var(--disp);margin-bottom:6px}
+.lights strong::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+
+@media(max-width:900px){
+.ch,.lab,.about{grid-template-columns:minmax(0,1fr)}
+.three,.steps{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.sc,.jr,.tl{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.sec{grid-template-columns:minmax(0,1fr);gap:16px}
+.mgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.about .photo{max-width:280px}}
+
+@media(max-width:600px){
+.grid,.three,.steps,.finds,.two,.sc,.jr,.tl,.lights,.edu{grid-template-columns:minmax(0,1fr)}
+.row{grid-template-columns:minmax(0,1fr);gap:6px}.row .pill{justify-self:start}
+.bar{grid-template-columns:minmax(0,1fr) 56px}.bar .tr{grid-column:1/-1;grid-row:2}
+nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
+
+.herowrap{position:relative;overflow:hidden;isolation:isolate;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end}
+.herowrap>.wrap{width:100%}
+.herowrap .hero{padding-top:140px}
+.cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:rgba(251,246,239,.8);text-decoration:none;font-size:20px;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,6px)}}
+.herowrap video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(250,245,238,.86),rgba(250,245,238,.78) 55%,rgba(250,245,238,.92))}
+.herowrap .facts{border-top-color:rgba(26,23,20,.15)}
+.herowrap.dk .veil{background:linear-gradient(180deg,rgba(16,11,7,.62) 0%,rgba(16,11,7,.50) 35%,rgba(16,11,7,.66) 70%,rgba(16,11,7,.88) 100%)}
+.herowrap.dk .hero h1{text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.herowrap.dk{color:#FBF6EF}.herowrap.dk .hero h1 .v{color:#E8A87C}.herowrap.dk .hero p{color:rgba(251,246,239,.85)}
+.herowrap.dk .facts{border-top-color:rgba(255,255,255,.25);color:rgba(251,246,239,.75)}.herowrap.dk .facts b{color:#fff}
+@media(prefers-reduced-motion:reduce){.herowrap video{display:none}.herowrap{background:url(video.jpg) center/cover}}
+.cbox{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.cbox h3{font-size:clamp(22px,1.9vw,26px);line-height:1.2;margin:0 0 18px}.cbox h3 .v{color:var(--acc)}
+.cbox .mail{display:inline-block;font-size:19px;margin-bottom:16px}
+.cbtn{display:flex;flex-wrap:wrap;gap:8px}.cbtn .btn{min-height:40px;padding:8px 16px;font-size:14px}
+@media(max-width:900px){.aside{max-width:420px}}
+
+/* puente oscuro: Enfoque continúa el clima del video */
+.t-bridge #enfoque{background:#17120d;color:#F3EDE5}
+.t-bridge #enfoque .kick{color:rgba(243,237,229,.6)}
+.t-bridge #enfoque .what{background:#211a14;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.t-bridge #enfoque .what p{color:rgba(243,237,229,.7)}
+.t-bridge #enfoque{padding-bottom:clamp(72px,9vw,128px)}
+
+
+/* ---- celular ---- */
+.menu{display:none}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:760px){
+ .hd{flex-wrap:nowrap;padding-block:12px}
+ .mark{font-size:24px}.logo small{font-size:11.5px;margin-top:6px}
+ .menu{display:grid;place-items:center;gap:5px;width:44px;height:44px;border-radius:50%;border:1px solid currentColor;background:transparent;padding:0;flex:none;align-content:center}
+ .menu span:not(.sr){display:block;width:16px;height:1.5px;background:currentColor;transition:transform .25s}
+ header:not(.solid) .menu{color:#FBF6EF}
+ header.open .menu span:nth-child(1){transform:translateY(3.25px) rotate(45deg)}header.open .menu span:nth-child(2){transform:translateY(-3.25px) rotate(-45deg)}
+ nav{position:absolute;left:0;right:0;top:100%;display:none;flex-direction:column;align-items:stretch;gap:10px;padding:16px max(5vw,16px) 22px;background:rgba(250,245,238,.98);box-shadow:0 12px 30px rgba(0,0,0,.15)}
+ header.open nav{display:flex}
+ header.open:not(.solid) nav{background:rgba(16,11,7,.96)}
+ nav .pill{justify-content:center;min-height:46px;font-size:16px!important}
+ .lang{justify-content:center;margin:4px 0 0}
+ header.open:not(.solid) .lang button{color:rgba(251,246,239,.6)}header.open:not(.solid) .lang button[aria-pressed=true]{color:#fff}
+ #case{padding-top:108px!important}
+ .herowrap .hero{padding-top:110px}
+ .cue{display:none}
+ .aside{display:contents}.about .photo{order:1;max-width:300px}.about .abt{order:2}.about .cbox{order:3}
+ .cbtn .btn{flex:1 1 auto;justify-content:center}
+ .facts{gap:12px 22px}.fr{width:100%}.fr .pill{flex:1;justify-content:center}
+ .ch h1{font-size:clamp(34px,9vw,44px)}
+ .nextc a.btn{width:100%;justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body class="t-bridge">
+<header><div class="wrap hd">
+  <a class="logo" href="#top" aria-label="EMEZETA · Martín Zlotnik"><span class="mark"><span>EME</span><i>zeta</i></span><small data-i="role">Research con mirada antropológica</small></a>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span class="sr" data-i="mn">Menú</span></button>
+  <nav aria-label="Principal" id="nav">
+    <a class="pill p-est" href="#casos" data-i="n1">Casos</a>
+    <a class="pill p-seg" href="#enfoque" data-i="n2">Enfoque</a>
+    <a class="pill p-eva" href="#lab" data-i="n3">Laboratorio</a>
+    <a class="pill p-dis" href="#sobre" data-i="n4">Sobre mí</a>
+    <div class="lang" role="group" aria-label="Idioma / Language"><button data-l="es" aria-pressed="true">ES</button><button data-l="en" aria-pressed="false">EN</button></div>
+  </nav>
+</div></header>
+
+<main id="home">
+<section class="herowrap dk" id="top">
+  <video id="bgv" autoplay muted loop playsinline preload="auto" poster="video.jpg" aria-hidden="true"><source src="video.mp4" type="video/mp4"></video>
+  <div class="veil"></div>
+  <a class="cue" href="#enfoque" aria-label="Bajar">↓</a>
+  <div class="wrap">
+  <div class="hero">
+    <h1><span data-i="h1a">Ayudo a negocios y marcas a entender a sus clientes</span><span class="v" data-i="h1c">a través del comportamiento humano.</span></h1>
+    <p data-i="hp">Research cuantitativo y cualitativo para que la propuesta de valor de tu negocio, marca y productos esté centrada en tus clientes.</p>
+  </div>
+  <div class="facts"><div class="fl" id="facts"></div><div class="fr"><a class="pill p-met" href="#contacto" data-i="cta1">Escribime</a><a class="pill p-lid" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a></div></div>
+</div>
+</section>
+
+
+<section class="band alt" id="enfoque"><div class="wrap">
+  <p class="kick"><span class="pill p-seg" data-i="k1">Enfoque</span></p>
+  <h2 data-i="w0">Maneras en que te puedo ayudar</h2>
+  <div class="three">
+    <div class="what"><span class="pill p-est" data-i="c-est">Estrategia y mercado</span><h3 data-i="w1t">Dónde está la oportunidad</h3><p data-i="w1">Mercado, cultura, segmentación y tendencias para entender dónde jugar antes de diseñar.</p></div>
+    <div class="what"><span class="pill p-dis" data-i="c-dis">Discovery y producto</span><h3 data-i="w2t">Qué construir y cómo funciona</h3><p data-i="w2">Discovery, tests de concepto, usabilidad y arquitectura de información, codo a codo con producto y diseño.</p></div>
+    <div class="what"><span class="pill p-met" data-i="c-met">Métricas y datos</span><h3 data-i="w3t">Qué dicen los datos y por qué</h3><p data-i="w3">Combinación de datos comportamentales con datos declarativos para tener una visión holística del problema.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="casos"><div class="wrap">
+  <p class="kick" data-i="k2">Casos</p>
+  <h2 data-i="cs">Casos seleccionados</h2>
+  <p class="lead" data-i="csl">Seleccioná el caso que más te interese.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="band alt" id="proceso"><div class="wrap">
+  <p class="kick" data-i="k3">Cómo trabajo</p>
+  <h2 data-i="pr">Del problema de negocio a la decisión</h2>
+  <div class="steps" id="steps"></div>
+</div></section>
+
+<section class="band" id="mas"><div class="wrap">
+  <details class="arch" id="archd"><summary><h3 data-i="ar">Más trabajo</h3><span class="tog" aria-hidden="true"></span></summary><div id="archive"></div></details>
+  <details class="arch" id="lab"><summary><h3 data-i="k4">Laboratorio</h3><span class="tog" aria-hidden="true"></span></summary>
+    <div class="lab labin"><div><h2 data-i="lb">Un agente de análisis entrenado con metodología</h2><p class="lead" data-i="lbp"></p></div><div class="flow" id="flow"></div></div>
+  </details>
+</div></section>
+
+
+
+<section class="band alt" id="sobre"><div class="wrap about">
+  <div class="aside">
+  <div class="photo"><span class="ini">MZ</span><img src="foto.jpg" alt="Martín Zlotnik" onerror="this.remove()"></div>
+  <div class="cbox" id="contacto">
+    <h3><span data-i="ct">Las mejores decisiones empiezan por una buena pregunta.</span> <span class="v" data-i="ct2">Hablemos.</span></h3>
+    <a class="mail" id="mail" href="mailto:tinchozlotnik@gmail.com">tinchozlotnik@gmail.com</a>
+    <div class="cbtn"><button class="btn solid" id="copy" data-i="cp">Copiar mail</button><a class="btn" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a><a class="btn" href="cv.pdf" data-i="cv2">Descargar CV</a></div>
+  </div>
+  </div>
+  <div class="abt">
+    <p class="kick" data-i="k5">Sobre mí</p>
+    <h2 data-i="ab">Martín Zlotnik</h2>
+    <div class="bio" data-ih="abp"><p>Siempre me atrajo el porqué detrás de lo que hace la gente: por qué confía en un producto y no en otro, por qué deja de usar una app que antes le encantaba, por qué el dinero significa algo distinto según quién lo tenga. La antropología me enseñó a construir esas preguntas para obtener esas respuestas. El research y el trabajo de producto, a convertirlas en decisiones.</p><p>Mi último rol fue como Senior UX &amp; Strategic Researcher en un gran grupo latinoamericano de banca, fintech, delivery, retail y turismo. En el último tramo me acerqué al lado de producto y datos: métricas de salud de clientes, segmentación comportamental y análisis de churn, para ayudar a los equipos a entender no solo qué dicen los números, sino qué pasa detrás de ellos. Antes estuve haciendo research para una software factory y para una agencia con clientes de consumo masivo.</p><p>Soy antropólogo social y cultural, egresado de la UBA. Hice cursos y capacitaciones en estadística aplicada, UX Research y UX Design.</p><p>Hoy estoy abierto a roles en research, estrategia de producto o product insights, y a conversar con equipos que quieran entender mejor a sus usuarios.</p></div>
+  </div>
+</div></section>
+
+
+</main>
+
+
+
+<main id="case" class="wrap hide" aria-live="polite"></main>
+
+<footer><div class="wrap" data-i="ft">© 2026 Martín Zlotnik · Buenos Aires</div></footer>
+
+<script>
+/* ===== Contenido del portfolio (ES / EN) =====
+   Para editar textos: cambiá los valores de es / en.
+   Categorías: est = Estrategia y mercado · seg = Segmentación · dis = Discovery
+               eva = Evaluativo · met = Métricas y datos · lid = Liderazgo y ResearchOps */
+
+const CATS = {
+  est: { es: "Estrategia y mercado", en: "Strategy & market" },
+  seg: { es: "Segmentación", en: "Segmentation" },
+  dis: { es: "Discovery", en: "Discovery" },
+  eva: { es: "Evaluativo", en: "Evaluative" },
+  met: { es: "Métricas y datos", en: "Metrics & data" },
+  lid: { es: "ResearchOps", en: "ResearchOps" }
+};
+
+const CASES = [
+{
+  id: "turismo", img: "img/turismo.jpg", top: true, vis: "turismo", cats: ["seg", "est"], year: "2026",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "Turismo", en: "Travel" },
+  method: { es: "Mixto · 21 entrevistas + 292 encuestas + desk research", en: "Mixed · 21 interviews + 292 surveys + desk research" },
+  stat: { n: "4", l: { es: "escenarios de viaje en lugar de perfiles fijos", en: "travel scenarios instead of fixed personas" } },
+  t: { es: "Escenarios, no personas", en: "Scenarios, not personas" },
+  hook: { es: "Repensar la segmentación de un grupo de agencias de turismo: segmentar por modos de viajar para pasar de vender pasajes a construir lealtad.", en: "Rethinking how a group of travel agencies segments its customers: modes of travel instead of fixed profiles, to move from selling tickets to building loyalty." },
+  role: { es: "Research Lead", en: "Research Lead" },
+  challenge: { es: "Un grupo de agencias de turismo necesitaba una segmentación compartida entre operaciones, comercial, marketing y producto digital. Segmentar por destino y precio no explicaba por qué algunas personas volvían a comprar y otras no.", en: "A group of travel agencies needed one segmentation shared by operations, sales, marketing and digital product. Segmenting by destination and price didn't explain why some people came back and others didn't." },
+  did: {
+    es: ["21 entrevistas en profundidad con clientes de tres agencias del grupo y con clientes del banco del ecosistema que no eran clientes de turismo.", "Encuesta a 292 clientes para dimensionar cada escenario.", "Desk research sobre el turismo como motor económico y las tendencias de viaje del país.", "Un marco teórico propio que cruza dos tensiones (descarga vs. control, con el sistema vs. por mi cuenta) con las necesidades dominantes de cada viaje."],
+    en: ["21 in-depth interviews with customers of three agencies in the group, plus banking customers from the same ecosystem who weren't travel customers.", "A survey of 292 customers to size each scenario.", "Desk research on tourism as an economic engine and on local travel trends.", "An original framework crossing two tensions (letting go vs. control, through the system vs. on my own) with the dominant need behind each trip."]
+  },
+  found: {
+    es: [["Lo que cambia es el escenario, no la persona", "Una misma persona puede ser cuatro clientes distintos según el momento que atraviesa. Por eso propusimos segmentar por escenarios y no por personas."], ["Cada escenario le pide un rol distinto a la agencia", "Curadora, organizadora del grupo, disparadora de oportunidades o solucionadora operativa."], ["La lealtad no se reparte igual", "En el viaje ritual el 54% quiere una relación fuerte con su vendedor. En el constitutivo, el 36% prefiere no tener ninguna: es el escenario con más potencial para la compra online autónoma."], ["El boca a boca pesa en todos", "Entre el 46% y el 53% de cada escenario decide por recomendación y confianza."]],
+    en: [["What changes is the scenario, not the person", "The same person can be four different customers depending on the moment they're in. So we proposed segmenting by scenario, not by persona."], ["Each scenario asks the agency for a different role", "Curator, group organiser, opportunity trigger or operational problem-solver."], ["Loyalty isn't evenly spread", "In the ritual trip, 54% want a strong bond with their agent. In the self-defining trip, 36% prefer no relationship at all: the scenario with the most potential for self-serve online sales."], ["Word of mouth matters everywhere", "Between 46% and 53% of each scenario decide based on recommendations and trust."]]
+  },
+  impact: { es: "Los cuatro escenarios reemplazaron a la segmentación por destino y precio como lenguaje común entre comercial, marketing y producto digital. Dimensionamos cada escenario y señalamos al constitutivo como el de mayor potencial de compra online, lo que orientó qué priorizar en el canal digital. El estudio pasó a ser la base de las campañas por escenario.", en: "The four scenarios replaced destination-and-price segmentation as a shared language across sales, marketing and digital product. We sized each scenario and flagged the self-defining trip as the one with the most online potential, which guided digital channel priorities. The study became the basis for scenario-based campaigns." },
+  quote: { es: "Viajar significa crear recuerdos y regalarte algo que nadie te va a poder robar.", en: "Travelling means making memories and giving yourself something no one can ever take away." },
+  qby: { es: "Clienta, viaje constitutivo", en: "Customer, self-defining trip" }
+},
+{
+  id: "reintegro", img: "img/reintegro.jpg", top: true, vis: "reintegro", cats: ["met", "eva"], year: "2026",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "Fintech", en: "Fintech" },
+  method: { es: "Cuanti · 686 respuestas cruzadas con uso real", en: "Quant · 686 responses matched to real usage" },
+  stat: { n: "2 de 3", l: { es: "que dicen no conocer el beneficio en realidad lo usan", en: "who say they don't know the benefit actually use it" } },
+  t: { es: "El reintegro llega, el incentivo no", en: "The cashback arrives, the incentive doesn't" },
+  hook: { es: "Cruzar una encuesta con datos de uso real para encontrar a miles de clientes que ya calificaban para un beneficio y no lo sabían.", en: "Matching a survey with real usage data to find thousands of customers who already qualified for a benefit and didn't know it." },
+  role: { es: "Research Lead", en: "Research Lead" },
+  challenge: { es: "Un banco digital lanzó un beneficio de reintegros en gastronomía para quienes mantienen un saldo promedio mínimo. La idea era incentivar el ahorro, pero nadie sabía si la gente entendía la mecánica ni si cambiaba su comportamiento.", en: "A digital bank launched a dining cashback benefit for customers who keep a minimum average balance. The goal was to encourage saving, but no one knew whether people understood how it worked or whether it changed their behaviour." },
+  did: {
+    es: ["Encuesta a clientes con meta de saldo asignada: 686 respuestas.", "Cruzamos cada respuesta con su comportamiento real: si cumplía la meta y si usaba el beneficio.", "Eso armó tres grupos (cumple y usa, cumple y no usa, no cumple pero usa) para leer awareness, entendimiento y funcionamiento."],
+    en: ["A survey of customers with an assigned balance goal: 686 responses.", "We matched every response to actual behaviour: whether they met the goal and whether they used the benefit.", "That gave three groups (meets goal and uses it, meets goal and doesn't, misses goal but uses it) to read awareness, understanding and mechanics."]
+  },
+  found: {
+    es: [["Lo dicho no coincide con lo hecho", "2 de cada 3 que dicen no conocer el beneficio en realidad lo usan. El reintegro llega, pero sin nombre."], ["La oportunidad estaba escondida", "Cerca de 3 de cada 10 clientes ya cumplían la meta y no usaban el beneficio. El 61% de ellos no sabía que existía: no había que cambiar su comportamiento, había que avisarles."], ["Se entiende usándolo", "El 84% de quienes lo usan entiende cómo funciona, contra el 49% de quienes no. Las dudas eran sobre las condiciones, no sobre la mecánica."], ["La meta es un problema de valor", "A 1 de cada 4 le pesa inmovilizar la plata, cumpla la meta o no."]],
+    en: [["What people say isn't what they do", "2 in 3 who say they don't know the benefit actually use it. The cashback arrives, but without a name."], ["The opportunity was hidden", "Nearly 3 in 10 customers already met the goal and didn't use the benefit. 61% of them didn't know it existed: no behaviour change needed, just telling them."], ["Using it is understanding it", "84% of users understand how it works, versus 49% of non-users. Doubts were about the conditions, not the mechanics."], ["The goal is a value problem", "1 in 4 feel the cost of keeping money idle, whether they meet the goal or not."]]
+  },
+  impact: { es: "El estudio convirtió un problema de comportamiento en uno de comunicación: dimensionamos un grupo de casi 3 de cada 10 clientes que ya calificaba y no usaba el beneficio, una oportunidad de activación que no requería cambiar ningún hábito. Las recomendaciones de visibilidad (nombrar el beneficio en el momento del reintegro y mostrar el progreso hacia la meta) se priorizaron en el backlog de producto.", en: "The study turned a behaviour problem into a communication one: we sized a group of nearly 3 in 10 customers who already qualified but didn't use the benefit, an activation opportunity that required no habit change. The visibility recommendations (naming the benefit at the moment of cashback, showing progress towards the goal) were prioritised in the product backlog." },
+  quote: null
+},
+{
+  id: "retencion", img: "img/retencion.jpg", vis: "retencion", cats: ["met", "seg"], year: "2025–2026",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "Fintech", en: "Fintech" },
+  method: { es: "Mixto · modelo de comportamiento sobre la base total + encuesta (n=175) cruzada por cluster + estudio de activación", en: "Mixed · behavioural model over the full base + survey (n=175) matched by cluster + activation study" },
+  stat: { n: "2", l: { es: "motores de fuga distintos que piden dos estrategias", en: "different drivers of outflow that call for two strategies" } },
+  t: { es: "Por qué se va el dinero", en: "Why the money leaves" },
+  hook: { es: "Activación y fuga de fondos en un banco digital: datos de comportamiento y la voz del cliente para entender por qué la gente usa el banco como puente.", en: "Activation and fund outflow at a digital bank: behavioural data and the customer's voice to understand why people use the bank as a bridge." },
+  role: { es: "Researcher en un equipo de Producto + Research: integración de fuentes y lectura cuali-cuanti", en: "Researcher in a Product + Research team: source integration and qual-quant synthesis" },
+  challenge: { es: "Un banco digital veía dos síntomas del mismo problema: cuentas que se abrían y nunca se activaban, y clientes activos que sacaban su dinero hacia otros bancos. La pregunta era cómo se manifiesta esa fuga y qué la explica.", en: "A digital bank saw two symptoms of one problem: accounts that were opened but never activated, and active customers moving their money to other banks. The question was how that outflow shows up and what explains it." },
+  did: {
+    es: ["Estudio de activación: por qué las cuentas nuevas no hacen su primer uso.", "Análisis de la base total con un score comportamental de machine learning (5 clusters) y un indicador de transferencias a cuentas propias en otros bancos, cruzado por segmento, edad, región, antigüedad, engagement y cobro de sueldo.", "Encuesta a 175 clientes cruzada con su cluster: motivos para dejar el banco, destino del dinero y qué haría falta para elegirlo."],
+    en: ["An activation study: why new accounts never make their first transaction.", "Analysis of the full customer base with a machine-learning behavioural score (5 clusters) and an indicator of transfers to own accounts at other banks, crossed by segment, age, region, tenure, engagement and salary deposit.", "A survey of 175 customers matched to their cluster: reasons to leave, where the money goes and what would make them choose the bank."]
+  },
+  found: {
+    es: [["Vienen a buscar un banco y no lo encuentran", "El 75% abrió la cuenta interesado en préstamos y solo el 36% vino por los beneficios. El 32% no la usa porque no pudo acceder a un préstamo o una tarjeta."], ["La fuga se concentra en los segmentos de entrada", "Los segmentos premium tienen entre 8% y 14% de clientes en el cluster negativo; los masivos llegan a 26% y 43%."], ["Cobrar el sueldo no retiene", "Acreditar el sueldo mejora el score, pero no frena las transferencias: el cliente puede estar activo y usar el banco solo como puente."], ["Dos desfondeos distintos", "En el extremo satisfecho la fuga es de crecimiento (busca crédito o inversión afuera). En el insatisfecho es de desconfianza (seguridad, app, atención)."]],
+    en: [["They come looking for a bank and don't find one", "75% opened the account interested in loans and only 36% came for the perks. 32% don't use it because they couldn't get a loan or a card."], ["Outflow concentrates in entry segments", "Premium segments have 8% to 14% of customers in the negative cluster; mass segments reach 26% and 43%."], ["Salary deposits don't retain", "Receiving a salary improves the score but doesn't stop transfers: a customer can be active and still use the bank as a bridge."], ["Two different outflows", "At the satisfied end, outflow is about growth (seeking credit or investment elsewhere). At the dissatisfied end, it's about distrust (security, app, support)."]]
+  },
+  impact: { es: "La lectura integrada derivó en seis líneas de acción (crédito, simplificar el programa de lealtad, soporte humano para clusters en riesgo, estrategia por edad, foco regional y no apostar todo a captar el sueldo) y en un esquema de experimentos medidos contra el propio score comportamental.", en: "The integrated reading led to six lines of action (credit, simplifying the loyalty programme, human support for at-risk clusters, age-based strategy, regional focus, and not relying solely on winning salary deposits), plus a set of experiments measured against the behavioural score itself." },
+  quote: null
+},
+{
+  id: "empresas", img: "img/empresas.jpg", vis: "empresas", cats: ["dis", "est"], year: "2025–2026",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "Banca empresas · B2B", en: "Business banking · B2B" },
+  method: { es: "Cuali · 33 empresas + 10 entrevistas a grandes empresas + entrevistas a directorios y ejecutivos", en: "Qual · 33 companies + 10 interviews with large companies + board and account manager interviews" },
+  stat: { n: "3", l: { es: "estudios B2B: lo que se rompió, la integración y la liquidez", en: "B2B studies: what broke, integration and liquidity" } },
+  t: { es: "¿Qué promesa se rompió?", en: "Which promise was broken?" },
+  hook: { es: "Tres estudios con empresas para entender por qué se van, qué esperan de una integración bancaria y cómo viven los tiempos del dinero.", en: "Three studies with companies to understand why they leave, what they expect from banking integration and how they live with the timing of money." },
+  role: { es: "Research Lead", en: "Research Lead" },
+  challenge: { es: "La banca empresas de un banco digital perdía fondos de sus clientes corporativos y, a la vez, quería lanzar integración por APIs y adelanto de facturas. Había que entender qué esperan las empresas de su banco antes de sumar productos.", en: "A digital bank's business arm was losing deposits from corporate clients while planning to launch API integration and invoice financing. It needed to understand what companies expect from their bank before adding products." },
+  did: {
+    es: ["Análisis de entrevistas a las 33 empresas que más fondos retiraron, realizadas por los ejecutivos de cuenta.", "10 entrevistas en profundidad con roles de tesorería y administración de grandes empresas sobre integración bancaria vía APIs.", "Entrevistas a miembros de directorio de empresas de siete rubros, y a ejecutivos comerciales, sobre liquidez y adelanto de facturas."],
+    en: ["Analysis of interviews with the 33 companies that withdrew the most funds, conducted by account managers.", "10 in-depth interviews with treasury and admin roles at large companies about API banking integration.", "Interviews with board members from companies across seven industries, and with account managers, about liquidity and invoice financing."]
+  },
+  found: {
+    es: [["La promesa era autonomía", "Las empresas no buscaban innovación: buscaban operar sin fricción. Se rompe con caídas del sistema, vacíos de producto y falta de un humano que resuelva."], ["La digitalización termina en la puerta del banco", "Ya operan con sistemas de gestión, pero para pagar tienen que salir, entrar al portal y volver a cargar todo."], ["Integrarse es elegir banco", "Una API ordena, pero también ata. Y sobre una base operativa frágil no suma valor: suma riesgo."], ["La industria aguanta tasas, no tiempos", "El adelanto de facturas vale como sincronizador entre tiempos distintos: pesa más la velocidad que la tasa, y se percibe mejor como plata propia que como deuda."]],
+    en: [["The promise was autonomy", "Companies weren't after innovation: they wanted to operate without friction. It breaks with system outages, product gaps and no human to solve things."], ["Digitisation stops at the bank's door", "They already run on management systems, but to pay they have to leave them, log into the portal and re-enter everything."], ["Integrating means choosing a bank", "An API brings order but also ties you down. On a fragile operational base, it doesn't add value: it adds risk."], ["Industry can handle rates, not delays", "Invoice financing is valued as a way to sync different timelines: speed matters more than rate, and it lands better as their own money than as new debt."]]
+  },
+  impact: { es: "Los estudios ordenaron la estrategia B2B: primero estabilidad operativa, después APIs. La integración se planteó con una segmentación por preparación (listas, en evaluación, no listas) para el go-to-market, y el adelanto de facturas se definió por ventanas de adopción según el rubro, como base del business case.", en: "The studies set the order of the B2B strategy: operational stability first, APIs second. Integration was framed with a readiness segmentation (ready, evaluating, not ready) for go-to-market, and invoice financing was defined by adoption windows per industry as the basis for the business case." },
+  quote: { es: "Salir del sistema donde registro todo y tener que pagar en la banca web es como hacer otro trabajo en paralelo.", en: "Leaving the system where I record everything to make payments on the bank's website is like doing a second job in parallel." },
+  qby: { es: "Administración, gran empresa", en: "Administration, large company" }
+},
+{
+  id: "vendors", img: "img/vendors.jpg", vis: "vendors", cats: ["dis", "met"], year: "2025",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "Delivery · B2B", en: "Food delivery · B2B" },
+  method: { es: "Mixto · encuentros con comercios + encuesta de opportunity gap + MoSCoW", en: "Mixed · merchant sessions + opportunity gap survey + MoSCoW" },
+  stat: { n: "6,4", l: { es: "de opportunity gap en gestión autónoma del catálogo, el mayor de todos", en: "opportunity gap for self-serve catalogue management, the highest of all" } },
+  t: { es: "Fundamentos para una herramienta de comercios", en: "Foundations for a merchant tool" },
+  hook: { es: "Priorizar el backlog de una plataforma para restaurantes y comercios de una app de delivery con evidencia, no con intuición.", en: "Prioritising the backlog of a platform for the restaurants and stores on a delivery app with evidence, not intuition." },
+  role: { es: "Research Lead", en: "Research Lead" },
+  challenge: { es: "Una app de delivery quería construir una herramienta de autogestión para sus comercios, en un mercado donde el líder regional ya fijaba el estándar. Había muchas ideas de features y poca claridad sobre cuáles importaban.", en: "A delivery app wanted to build a self-serve tool for its merchants, in a market where the regional leader already set the standard. There were many feature ideas and little clarity on which ones mattered." },
+  did: {
+    es: ["Encuadre del desafío con el negocio: alcance, mercado, objetivos y visión.", "Encuentros con comercios para relevar su experiencia actual, dolores y percepción de valor.", "Encuesta para dimensionar los dolores con opportunity gap (importancia vs. satisfacción) y priorizar features con MoSCoW."],
+    en: ["Framing the challenge with the business: scope, market, goals and vision.", "Sessions with merchants to map their current experience, pain points and perceived value.", "A survey to size pain points with opportunity gap (importance vs. satisfaction) and prioritise features with MoSCoW."]
+  },
+  found: {
+    es: [["El catálogo es lo primero", "Gestionar el catálogo de forma autónoma tiene el mayor opportunity gap (6,4), la peor satisfacción (2,86 de 5) y la máxima importancia (4,65)."], ["La experiencia del cliente es imprescindible", "Las features de CX fueron las más marcadas como \"must have\": es un diferencial que la competencia no ofrece."], ["El líder fija el estándar operativo", "Lo operativo es la base a alcanzar; el diferencial está en lo humano y en la inteligencia comercial."], ["Autonomía, información y atención", "Los comercios piden equilibrio entre poder hacer solos, tener datos y que alguien responda."]],
+    en: [["The catalogue comes first", "Self-serve catalogue management has the highest opportunity gap (6.4), the lowest satisfaction (2.86 of 5) and the highest importance (4.65)."], ["Customer experience is a must", "CX features were the ones most marked as must-haves: a differentiator competitors don't offer."], ["The leader sets the operational bar", "Operations are the baseline to reach; the differentiator lies in the human touch and in business intelligence."], ["Autonomy, information and support", "Merchants want a balance between doing it themselves, having data and having someone answer."]]
+  },
+  impact: { es: "El backlog se priorizó con evidencia: la gestión autónoma del catálogo pasó al frente, seguida por avisos de pedidos y seguimiento de repartidores. El estudio dio paso a una segunda fase con ideación y testeo de las mejoras, y a una medición periódica de satisfacción en cada release.", en: "The backlog was prioritised with evidence: self-serve catalogue management moved to the top, followed by order alerts and courier tracking. The study led to a second phase of ideation and testing, plus a recurring satisfaction measure at each release." },
+  quote: { es: "Cambiamos las fotos, la carta y los precios del perfil y empezamos a vender once veces más.", en: "We changed the photos, menu and prices on our profile and started selling eleven times more." },
+  qby: { es: "Comercio gastronómico", en: "Restaurant owner" }
+},
+{
+  id: "marketplace", img: "img/marketplace.jpg", top: true, vis: "marketplace", cats: ["dis", "met", "eva"], year: "2026",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "E-commerce", en: "E-commerce" },
+  method: { es: "Mixto · 17 entrevistas + priorización + navegación + funnels + tickets de soporte", en: "Mixed · 17 interviews + prioritisation + navigation + funnels + support tickets" },
+  stat: { n: "94%", l: { es: "de las primeras compras son de un solo ítem", en: "of first purchases are a single item" } },
+  t: { es: "Confianza y seguridad: las dos monedas de la compra online", en: "Trust and safety: the two currencies of online shopping" },
+  hook: { es: "Por qué un marketplace que ya existe no alcanza para que la gente compre, y qué evidencia necesita ver el usuario en cada momento de riesgo.", en: "Why a marketplace existing isn't enough for people to buy there, and what evidence users need to see at each moment of risk." },
+  role: { es: "Research Lead", en: "Research Lead" },
+  challenge: { es: "El marketplace de un ecosistema financiero tenía tráfico pero poca conversión y casi nada de recompra. La pregunta: qué necesita alguien para encontrar, confiar, comprar y volver.", en: "A financial ecosystem's marketplace had traffic but low conversion and almost no repeat purchases. The question: what does someone need to find, trust, buy and come back?" },
+  did: {
+    es: ["17 entrevistas semiestructuradas, con una muestra segmentada por frecuencia de compra (power, heavy, medium y light users) más compradores recientes.", "Ejercicios de priorización tipo card sorting y navegación en vivo de la plataforma.", "Triangulación con funnels de analítica de producto y con los temas de los tickets de soporte."],
+    en: ["17 semi-structured interviews, with a sample segmented by purchase frequency (power, heavy, medium and light users) plus recent buyers.", "Card-sort style prioritisation exercises and live navigation of the platform.", "Triangulation with product analytics funnels and support ticket themes."]
+  },
+  found: {
+    es: [["Comprar online es una decisión de riesgo", "No es solo precio. Tiene dos caras: confianza (¿me van a cumplir?) y seguridad (¿es seguro pagar acá?)."], ["La primera compra es un test", "El 94% arranca con un solo ítem de ticket bajo. Ganar esa compra es lo que habilita la recompra y el ticket grande."], ["La confianza se demuestra", "Fotos reales, reseñas, reputación del vendedor, compra protegida, tracking y un humano que se hace cargo si algo falla."], ["El descubrimiento se movió", "La IA aparece como un nuevo punto de entrada a las marcas."]],
+    en: [["Buying online is a risk decision", "It's not just price. It has two sides: trust (will they deliver?) and safety (is it safe to pay here?)."], ["The first purchase is a test", "94% start with one low-ticket item. Winning that purchase is what unlocks repeat purchases and bigger baskets."], ["Trust is shown, not claimed", "Real photos, reviews, seller reputation, buyer protection, tracking and a human who takes ownership when something goes wrong."], ["Discovery has moved", "AI shows up as a new entry point to brands."]]
+  },
+  impact: { es: "Fue el primer diagnóstico compartido de por qué el marketplace no convertía. Cambió el foco de atraer tráfico a ganar la primera compra y ordenó el roadmap en cuatro frentes: búsqueda y filtros, checkout sin fricción, compra protegida visible y tracking.", en: "It was the first shared diagnosis of why the marketplace wasn't converting. It shifted the focus from driving traffic to winning the first purchase, and organised the roadmap into four fronts: search and filters, frictionless checkout, visible buyer protection and tracking." },
+  quote: null
+},
+{
+  id: "ahorro", img: "img/ahorro.jpg", top: true, vis: "ahorro", cats: ["seg", "dis", "eva"], year: "2024–2025",
+  country: { es: "Paraguay", en: "Paraguay" },
+  industry: { es: "Fintech", en: "Fintech" },
+  method: { es: "Mixto · 5 estudios, 746 encuestas y 23 entrevistas", en: "Mixed · 5 studies, 746 surveys and 23 interviews" },
+  stat: { n: "5", l: { es: "estudios encadenados durante un año en una misma vertical", en: "linked studies over one year in a single vertical" } },
+  t: { es: "Un año de research para ahorro e inversión", en: "A year of research for savings and investment" },
+  hook: { es: "De segmentar a testear conceptos: cómo ahorra (y por qué no ahorra) la clase media en un mercado con poca cultura de inversión.", en: "From segmentation to concept tests: how the middle class saves (and why it doesn't) in a market with little investment culture." },
+  role: { es: "Research Lead del programa, en dupla con Service Design y con Contenido y Diseño", en: "Programme Research Lead, partnering with Service Design and with Content & Design" },
+  challenge: { es: "La vertical de ahorro e inversión de un banco digital quería crecer sin saber bien para quién diseñaba. La base estaba concentrada en productos tradicionales de bajo riesgo.", en: "A digital bank's savings and investment vertical wanted to grow without really knowing who it was designing for. The base was concentrated in traditional low-risk products." },
+  did: {
+    es: ["Segmentación (encuesta, n=421): validar cuatro clusters de comportamiento con variables actitudinales.", "Discovery (8 entrevistas): la experiencia de invertir en el exterior.", "Test de concepto (7 entrevistas): un plazo fijo de montos bajos.", "Test de concepto (8 entrevistas): ahorro automático por redondeo.", "Experiencia (encuesta CSAT, n=325): el depósito a plazo y sus canales."],
+    en: ["Segmentation (survey, n=421): validating four behavioural clusters with attitudinal variables.", "Discovery (8 interviews): the experience of investing abroad.", "Concept test (7 interviews): a low-minimum fixed-term deposit.", "Concept test (8 interviews): automatic round-up savings.", "Experience (CSAT survey, n=325): the term deposit and its channels."]
+  },
+  found: {
+    es: [["Ahorro y consumo están pegados", "Una puerta para productos de ahorro que entren por el consumo. También apareció una brecha de género en la capacidad de ahorro."], ["\"Cobro, pago, llego justo, sueño con ahorrar\"", "Las barreras del plazo fijo son de monto, de tiempo, de conocimiento y de status quo."], ["El redondeo como intervención", "Dos perfiles (automatizar o poner reglas propias) y una variable que nadie ofrecía: ahorrar por tiempo y no solo por monto."], ["Dos palancas de satisfacción", "CSAT de 4 sobre 5, con las tasas y la entrega del certificado como lo que hay que resolver."]],
+    en: [["Saving and spending go hand in hand", "An opening for savings products that come in through spending. A gender gap in saving capacity also emerged."], ["\"Get paid, pay bills, barely make it, dream of saving\"", "Barriers to the fixed-term concept were about amount, time, knowledge and status quo."], ["Round-ups as an intervention", "Two profiles (automate it or set your own rules) and a variable nobody offered: saving by time, not just by amount."], ["Two satisfaction levers", "CSAT of 4 out of 5, with rates and certificate delivery as what needs fixing."]]
+  },
+  impact: { es: "La segmentación pasó a guiar la comunicación por cluster, el redondeo entró al roadmap como producto puente entre consumo y ahorro, y el onboarding de inversión internacional se diseñó sobre una narrativa de viaje del héroe. Cada estudio alimentó al siguiente.", en: "The segmentation came to guide cluster-based communication, round-ups entered the roadmap as a bridge product between spending and saving, and the international investing onboarding was designed around a hero's-journey narrative. Each study fed the next." },
+  quote: { es: "La gente media trabajadora, con un sueldo que es muy poco, no justifica que meta su dinero a plazos largos.", en: "For working people on a small salary, it doesn't make sense to lock money away for long terms." },
+  qby: { es: "Participante, test de concepto", en: "Participant, concept test" }
+},
+{
+  id: "cocina", img: "img/cocina.jpg", vis: "cocina", cats: ["dis", "eva"], year: "2023–2024",
+  country: { es: "Argentina", en: "Argentina" },
+  industry: { es: "Food service", en: "Food service" },
+  method: { es: "Cuali · observación + entrevistas + journey + story mapping + pruebas de usabilidad", en: "Qual · observation + interviews + journey + story mapping + usability tests" },
+  stat: { n: "1", l: { es: "app de punta a punta: del board de estrategia a los restaurantes", en: "end-to-end app: from strategy board to restaurants" } },
+  t: { es: "De la cocina a la app", en: "From the kitchen to the app" },
+  hook: { es: "Discovery, diseño y testing de una herramienta para el crew de una cadena global de comida rápida.", en: "Discovery, design and testing of a tool for the crew of a global fast-food chain." },
+  role: { es: "Research Lead en un equipo con PM, Tech Lead, Product Designer y POs", en: "Research Lead in a team with a PM, Tech Lead, Product Designer and POs" },
+  challenge: { es: "Una cadena global de comida rápida necesitaba una app para que el crew, los líderes y los gerentes gestionaran los tiempos de los alimentos en cocina. El objetivo de negocio: reducir el desperdicio.", en: "A global fast-food chain needed an app for crew, shift leaders and managers to manage food holding times in the kitchen. The business goal: reduce waste." },
+  did: {
+    es: ["Board de estrategia de producto con IT, infraestructura y product owners para definir visión, objetivos y KPIs desde el día uno.", "Observación en restaurante, entrevistas a actores clave y un journey map del proceso de preparación.", "Story mapping y Crazy 8 con todo el equipo para pasar de hallazgos a historias de usuario.", "Prototipos de media y alta fidelidad y pruebas de usabilidad remotas."],
+    en: ["A product strategy board with IT, infrastructure and product owners to set vision, goals and KPIs from day one.", "In-restaurant observation, key stakeholder interviews and a journey map of the prep process.", "Story mapping and Crazy 8s with the whole team to turn findings into user stories.", "Mid- and high-fidelity prototypes and remote usability tests."]
+  },
+  found: {
+    es: [["¿Hora o cuenta regresiva?", "El crew no distinguía si los números de los timers eran horarios o cuenta regresiva. Sumar los segundos resolvió la ambigüedad."], ["Menos es más en el MVP", "Configurar unidades de medida confundía y no aplicaba igual a todos los alimentos: salió del MVP y entró la selección múltiple de timers."], ["El dolor real estaba en el journey", "Los puntos de fricción de la preparación ordenaron las épicas y el alcance."]],
+    en: [["Time of day or countdown?", "Crew couldn't tell whether timer numbers were clock times or countdowns. Adding seconds removed the ambiguity."], ["Less is more in the MVP", "Setting units of measure was confusing and didn't apply to every item: it left the MVP and multi-select timers came in."], ["The real pain was in the journey", "Friction points in food prep shaped the epics and the scope."]]
+  },
+  impact: { es: "La app se desarrolló y se implementó en restaurantes. Las iteraciones se resolvieron en el prototipo, antes de desarrollo, y los KPIs de éxito (desperdicio, satisfacción en calidad y adopción del crew) quedaron definidos desde el inicio.", en: "The app was built and rolled out in restaurants. Iterations were solved at the prototype stage, before development, and success KPIs (waste, quality satisfaction and crew adoption) were set from the start." },
+  quote: null
+}
+];
+
+const ARCHIVE = [
+  { era: "gv", year: "2026", cat: "eva", country: { es: "Paraguay", en: "Paraguay" },
+    t: { es: "La home de una app bancaria a una semana del lanzamiento", en: "A banking app's home screen one week after launch" },
+    d: { es: "9 entrevistas con tareas en pantalla. Funciona para quien quiere ver todo de un vistazo; el perfil transaccional no descubre lo nuevo. Insumo para los ajustes post-lanzamiento.", en: "9 interviews with on-screen tasks. It works for people who want everything at a glance; transactional users don't discover what's new. Input for post-launch fixes." } },
+  { era: "gv", year: "2026", cat: "eva", country: { es: "Paraguay", en: "Paraguay" },
+    t: { es: "¿Dónde buscarías una silla gamer?", en: "Where would you look for a gaming chair?" },
+    d: { es: "Tree test de la arquitectura de un marketplace (~75 participantes). Los botines llegaron a destino en el 66% de los casos y los insumos de costura en el 11%: evidencia para reestructurar las categorías ambiguas.", en: "Tree test of a marketplace's architecture (~75 participants). Football boots were found 66% of the time and sewing supplies 11%: evidence to restructure ambiguous categories." } },
+  { era: "gv", year: "2026", cat: "met", country: { es: "Paraguay", en: "Paraguay" },
+    t: { es: "Pagos cashless en eventos masivos", en: "Cashless payments at large events" },
+    d: { es: "Encuesta (n=145) con estimación por intervalos: la adopción ya estaba resuelta (73% a 86%, con 95% de confianza) y la fricción estaba en consultar y recuperar el saldo, que quedó como condición para escalar.", en: "Survey (n=145) with interval estimation: adoption was already solved (73% to 86%, 95% confidence) and the friction was in checking and recovering the balance, which became a condition for scaling." } },
+  { era: "sh", year: "2024", cat: "dis", country: { es: "Argentina", en: "Argentina" },
+    t: { es: "Una profesión en crisis silenciosa", en: "A profession in quiet crisis" },
+    d: { es: "Research fundacional para un colegio de veterinarios: tendencias, etnografía rápida en una feria agroindustrial, 14 entrevistas y 85 encuestas. Los 14 entrevistados usarían una comunidad digital, que pasó a ser el MVP.", en: "Foundational research for a veterinary association: trends, rapid ethnography at an agribusiness fair, 14 interviews and 85 surveys. All 14 interviewees would use a digital community, which became the MVP." } },
+  { era: "sh", year: "2024", cat: "met", country: { es: "Argentina", en: "Argentina" },
+    t: { es: "Por qué se pierde el 99,5% del tráfico antes de pagar", en: "Why 99.5% of traffic drops before paying" },
+    d: { es: "Funnel del carrito de una cadena de gimnasios contra benchmarks del sector (0,5% vs. 1,3% a 3%). La mayor caída estaba entre la home y la elección de plan; derivó en un plan de testing A/B.", en: "A gym chain's checkout funnel against industry benchmarks (0.5% vs. 1.3% to 3%). The biggest drop was between the home page and plan selection; it led to an A/B testing plan." } },
+  { era: "sh", year: "2023–2024", cat: "eva", country: { es: "Argentina", en: "Argentina" },
+    t: { es: "Instalar dual track en un equipo de producto", en: "Bringing dual-track to a product team" },
+    d: { es: "Plan anual de UX para una cadena de gimnasios: más de 40 pruebas de usabilidad con vendedores y líderes, homes por rol implementadas y una hoja de ruta con ResearchOps.", en: "Annual UX plan for a gym chain: 40+ usability tests with sales staff and leaders, role-based home screens shipped and a roadmap including ResearchOps." } },
+  { era: "sh", year: "2024", cat: "eva", country: { es: "México", en: "Mexico" },
+    t: { es: "Lo que los tickets de soporte dicen de la usabilidad", en: "What support tickets say about usability" },
+    d: { es: "Dos meses de tickets agrupados por tema más una evaluación heurística de una plataforma de RR.HH. y hiring. El acceso era el problema creciente; el recupero de credenciales pasó a la hoja de ruta.", en: "Two months of tickets grouped by theme plus a heuristic evaluation of an HR and hiring platform. Access was the growing issue; credential recovery went onto the roadmap." } },
+  { era: "cpg", year: "2023", cat: "est", country: { es: "Brasil", en: "Brazil" },
+    t: { es: "Territorios de alimentación en Brasil", en: "Food territories in Brazil" },
+    d: { es: "Qué necesidades (estar juntos, atajos en la cocina, salud flexible, fuerza) conectan con la rutina de los brasileños, como mapa para el pipeline de innovación.", en: "Which needs (togetherness, kitchen shortcuts, flexible health, strength) connect with Brazilians' routines, as a map for the innovation pipeline." } },
+  { era: "cpg", year: "2023", cat: "est", country: { es: "Brasil, Colombia y Guatemala", en: "Brazil, Colombia and Guatemala" },
+    t: { es: "Buscando la promoción ideal", en: "Looking for the ideal promotion" },
+    d: { es: "12 entrevistas, 900 encuestas y un conjoint para entender el rol de premios y mecánicas, y dar criterios concretos para las siguientes promociones regionales.", en: "12 interviews, 900 surveys and a conjoint analysis to understand the role of prizes and mechanics, and set concrete criteria for future regional promotions." } },
+  { era: "cpg", year: "2022", cat: "seg", country: { es: "Perú y Ecuador", en: "Peru and Ecuador" },
+    t: { es: "Un snack con raíces: el plátano en la región andina", en: "A snack with roots: plantain in the Andes" },
+    d: { es: "16 entrevistas y 800 encuestas. El vínculo cambia entre la sierra (más funcional) y la costa (más emocional), y explica la baja recordación de las marcas empaquetadas.", en: "16 interviews and 800 surveys. The bond shifts between the highlands (more functional) and the coast (more emotional), explaining low recall of packaged brands." } }
+];
+
+const ERAS = {
+  gv: { es: "Grupo financiero y retail · 2024–2026", en: "Financial & retail group · 2024–2026" },
+  sh: { es: "Software factory · 2023–2024", en: "Software factory · 2023–2024" },
+  cpg: { es: "Consumo masivo · 2022–2023", en: "Consumer goods · 2022–2023" }
+};
+
+</script>
+<script>
+{
+const T = {
+  es: { role:"Research con mirada antropológica", n1:"Casos", n2:"Enfoque", n3:"Laboratorio", n4:"Sobre mí",
+    h1a:"Ayudo a negocios y marcas a entender a sus clientes", h1c:"a través del comportamiento humano.",
+    hp:"Research cuantitativo y cualitativo para que la propuesta de valor de tu negocio, marca y productos esté centrada en tus clientes.",
+    cta1:"Escribime", cv:"CV", mn:"Menú", k1:"Enfoque", w0:"Maneras en que te puedo ayudar",
+    w1t:"Dónde está la oportunidad", w1:"Mercado, cultura, segmentación y tendencias para entender dónde jugar antes de diseñar.",
+    w2t:"Qué construir y cómo funciona", w2:"Discovery, tests de concepto, usabilidad y arquitectura de información, codo a codo con producto y diseño.",
+    w3t:"Qué dicen los datos y por qué", w3:"Combinación de datos comportamentales con datos declarativos para tener una visión holística del problema.",
+    k2:"Casos", cs:"Casos seleccionados", csl:"Seleccioná el caso que más te interese.",
+    ar:"Más trabajo", all:"Todos", read:"Ver caso →", k3:"Cómo trabajo", pr:"Del problema de negocio a la decisión",
+    k4:"Laboratorio", lb:"Un agente de análisis entrenado con metodología",
+    lbp:"Armé un agente en Gemini cargándole manuales de metodología y de análisis, para que pudiera interpretar bien hallazgos sencillos. Me ayuda a bajar las primeras instancias de un análisis; la lectura de fondo y las conclusiones siguen siendo mías.",
+    k5:"Sobre mí", ab:"Martín Zlotnik", abp:"<p>Siempre me atrajo el porqué detrás de lo que hace la gente: por qué confía en un producto y no en otro, por qué deja de usar una app que antes le encantaba, por qué el dinero significa algo distinto según quién lo tenga. La antropología me enseñó a construir esas preguntas para obtener esas respuestas. El research y el trabajo de producto, a convertirlas en decisiones.</p><p>Mi último rol fue como Senior UX &amp; Strategic Researcher en un gran grupo latinoamericano de banca, fintech, delivery, retail y turismo. En el último tramo me acerqué al lado de producto y datos: métricas de salud de clientes, segmentación comportamental y análisis de churn, para ayudar a los equipos a entender no solo qué dicen los números, sino qué pasa detrás de ellos. Antes estuve haciendo research para una software factory y para una agencia con clientes de consumo masivo.</p><p>Soy antropólogo social y cultural, egresado de la UBA. Hice cursos y capacitaciones en estadística aplicada, UX Research y UX Design.</p><p>Hoy estoy abierto a roles en research, estrategia de producto o product insights, y a conversar con equipos que quieran entender mejor a sus usuarios.</p>",
+    k6:"Contacto", ct:"Las mejores decisiones empiezan por una buena pregunta.", ct2:"Hablemos.", cp:"Copiar mail", copied:"Copiado", cv2:"Descargar CV",
+    nt:"Los casos completos, con entregables, están disponibles a pedido.", ft:"© 2026 Martín Zlotnik · Buenos Aires",
+    back:"← Volver a los casos", next:"Siguiente:", m1:"Año", m2:"País", m3:"Industria", m4:"Rol", mm:"Método",
+    "c-est":"Estrategia y mercado","c-dis":"Discovery y producto","c-met":"Métricas y datos",s1:"El desafío", s2:"Qué hicimos", s3:"Lo que muestran los datos", s4:"Qué encontramos", s5:"Impacto", s6:"En sus palabras" },
+  en: { role:"Research with an anthropologist’s eye", n1:"Work", n2:"Approach", n3:"Lab", n4:"About",
+    h1a:"Helping businesses make sense of their clients", h1c:"by understanding human behaviour.",
+    hp:"Quantitative and qualitative research so the value proposition of your business, brand and products is centred on your customers.",
+    cta1:"Get in touch", cv:"Résumé", mn:"Menu", k1:"Approach", w0:"Ways I can help",
+    w1t:"Where the opportunity is", w1:"Markets, culture, segmentation and trends to understand where to play before designing.",
+    w2t:"What to build and how it works", w2:"Discovery, concept tests, usability and information architecture, side by side with product and design.",
+    w3t:"What the data says, and why", w3:"Combining behavioural and self-reported data to get a holistic view of the problem.",
+    k2:"Work", cs:"Selected case studies", csl:"Pick the case that interests you most.",
+    ar:"More work", all:"All", read:"Read case →", k3:"How I work", pr:"From business problem to decision",
+    k4:"Lab", lb:"An analysis agent trained on methodology",
+    lbp:"I built an agent in Gemini, loading it with methodology and analysis manuals so it could correctly interpret straightforward findings. It helps me get the first passes of an analysis done; the deeper reading and the conclusions are still mine.",
+    k5:"About", ab:"Martín Zlotnik", abp:"<p>I’ve always been drawn to the “why” behind what people do: why they trust one product and not another, why they stop using an app they once loved, why money means something different depending on who holds it. Anthropology taught me to build those questions to get to those answers. Research and product work taught me to turn them into decisions.</p><p>Most recently, I was a Senior UX &amp; Strategic Researcher at a large Latin American group spanning banking, fintech, delivery, retail and travel. In my last stretch there, I moved closer to product and data: customer health metrics, behavioural segmentation and churn analysis, helping product teams understand not just what the numbers were saying, but what was happening behind them. Before that, I did research for a software factory and for an agency with consumer goods clients.</p><p>I’m a social and cultural anthropologist, graduated from the University of Buenos Aires. I’ve taken courses and training in applied statistics, UX research and UX design.</p><p>I’m open to roles in research, product strategy or product insights, and to conversations with teams who want to understand their users more deeply.</p>",
+    k6:"Contact", ct:"The best decisions start with a good question.", ct2:"Let’s talk.", cp:"Copy email", copied:"Copied", cv2:"Download résumé",
+    nt:"Full case studies, with deliverables, are available on request.", ft:"© 2026 Martín Zlotnik · Buenos Aires",
+    back:"← Back to work", next:"Next:", m1:"Year", m2:"Country", m3:"Industry", m4:"Role", mm:"Method",
+    "c-est":"Strategy & market","c-dis":"Discovery & product","c-met":"Metrics & data",s1:"The challenge", s2:"What we did", s3:"What the data shows", s4:"What we found", s5:"Impact", s6:"In their words" }
+};
+const FACTS = { es:[["8","países"],["+20","estudios"],["+10","industrias"],["B2C y B2B",""]], en:[["8","countries"],["20+","studies"],["10+","industries"],["B2C and B2B",""]] };
+const STEPS = {
+  es:[["Empezar por la decisión","Cuáles son las preguntas que tiene el negocio y qué decisión tiene que tomar con el estudio."],["El método sigue a la pregunta","Etnografía, encuesta, test o datos: lo que la pregunta pida, con integralidad metodológica."],["El campo de triangulación","Lo que la gente dice, lo que hace y lo que muestran los datos, leídos juntos."],["Activación y seguimiento","Hallazgos con dueño, recomendaciones accionables y seguimiento de lo que pasa después."]],
+  en:[["Start with the decision","What questions the business has, and what decision it needs to make with the study."],["Method follows the question","Ethnography, survey, test or data: whatever the question needs, with methodological integrity."],["Triangulating in the field","What people say, what they do and what the data shows, read together."],["Activation and follow-up","Findings with owners, actionable recommendations and follow-up on what happens next."]]
+};
+const FLOW = {
+  es:[["Entrada","Manuales de metodología y de análisis"],["Agente en Gemini","Primera lectura: ordena respuestas abiertas, agrupa temas y propone hallazgos sencillos"],["Yo","Valido, profundizo e interpreto: la conclusión es humana"]],
+  en:[["Input","Methodology and analysis manuals"],["Gemini agent","First pass: organises open answers, groups themes and drafts straightforward findings"],["Me","I validate, go deeper and interpret: the conclusion stays human"]]
+};
+const EDU = {
+  es:[["Lic. en Ciencias Antropológicas","Universidad de Buenos Aires"],["Diplomatura en UX Research","Universidad de Belgrano"],["Estadística para análisis de datos","UTN.BA · 2026"]],
+  en:[["BA in Anthropology","University of Buenos Aires"],["UX Research Diploma","Universidad de Belgrano"],["Statistics for Data Analysis","UTN.BA · 2026"]]
+};
+
+let L = "es"; try { L = localStorage.getItem("lang") || "es"; } catch (e) {}
+let F = "all";
+const $ = s => document.querySelector(s);
+const t = k => T[L][k] || k;
+const x = o => o ? (o[L] ?? o.es) : "";
+const pc = c => `<span class="pill p-${c}">${x(CATS[c])}</span>`;
+
+const VIS = {
+  turismo(){
+    const s = L==="es" ? [["Constitutivo",30,"Distinción e identidad","Curadora experta","seg"],["Ritual",32,"Conexión y pertenencia","Organizadora del grupo","met"],["Oportunidad",22,"Seguridad: \"hice bien\"","Disparadora de ofertas","dis"],["Circunstancial",15,"Previsibilidad","Solucionadora operativa","eva"]]
+      : [["Self-defining",30,"Distinction and identity","Expert curator","seg"],["Ritual",32,"Connection and belonging","Group organiser","met"],["Opportunity",22,"Security: \"I made a smart call\"","Deal trigger","dis"],["Circumstantial",15,"Predictability","Operational fixer","eva"]];
+    return `<h3>${L==="es"?"Cuatro escenarios de viaje":"Four travel scenarios"}</h3><p class="sub">${L==="es"?"Peso de cada escenario en la encuesta (n=292) y rol que le pide a la agencia":"Share of each scenario in the survey (n=292) and the role it asks of the agency"}</p>
+    <div class="stack">${s.map(r=>`<div class="p-${r[4]}" style="flex:${r[1]}">${r[1]}%</div>`).join("")}</div>
+    <div class="sc">${s.map(r=>`<div class="p-${r[4]}"><strong>${r[0]}</strong><b>${r[1]}%</b>${r[2]}<br><br>${L==="es"?"Rol de la agencia":"Agency role"}: ${r[3]}</div>`).join("")}</div>`;
+  },
+  reintegro(){
+    const g = L==="es" ? [["Cumple la meta y usa",56,"eva"],["Cumple la meta, no usa",28,"met"],["No cumple, usa",16,"dis"]] : [["Meets goal, uses it",56,"eva"],["Meets goal, doesn't use it",28,"met"],["Misses goal, uses it",16,"dis"]];
+    return `<h3>${L==="es"?"Tres grupos según el uso real":"Three groups by actual usage"}</h3><p class="sub">${L==="es"?"Composición del universo encuestado":"Composition of the surveyed universe"}</p>
+    <div class="stack">${g.map(r=>`<div class="p-${r[2]}" style="flex:${r[1]}">${r[1]}%</div>`).join("")}</div>
+    <div class="sc" style="grid-template-columns:repeat(3,minmax(0,1fr))">${g.map(r=>`<div class="p-${r[2]}"><strong>${r[0]}</strong><b>${r[1]}%</b></div>`).join("")}</div>
+    <div class="two"><div class="p-met"><h4>61%</h4>${L==="es"?"del grupo que cumple y no usa no sabe que el beneficio existe":"of those who meet the goal but don't use it don't know the benefit exists"}</div>
+    <div style="background:var(--bg2)"><h4>${L==="es"?"Entendimiento de la mecánica":"Understanding of the mechanics"}</h4><div class="bars">
+    ${[[L==="es"?"Usa el beneficio":"Uses the benefit",84,"eva"],[L==="es"?"No lo usa":"Doesn't use it",49,"met"]].map(b=>`<div class="bar"><span>${b[0]}</span><div class="tr"><i style="width:${b[1]}%;background:var(--${b[2]}-f)"></i></div><em>${b[1]}%</em></div>`).join("")}</div></div></div>`;
+  },
+  retencion(){
+    const b = L==="es" ? [["Segmentos premium",14,"eva","8–14%"],["Masivo A",26,"dis","26%"],["Masivo B",43,"met","43%"]] : [["Premium segments",14,"eva","8–14%"],["Mass A",26,"dis","26%"],["Mass B",43,"met","43%"]];
+    const c = L==="es" ? [["Desfondeo de crecimiento","Clusters positivos","Falta de crédito y servicios atractivos","Inversión, pago de préstamos","Crecer: más crédito, dólares, tarjetas","eva"],["Desfondeo de desconfianza","Clusters negativos","Crédito, seguridad, app y atención","Gastos del día a día","Lo básico: seguridad, agilidad, un humano","met"]]
+      : [["Growth outflow","Positive clusters","Lack of credit and attractive services","Investing, paying loans","Grow: more credit, dollars, cards","eva"],["Distrust outflow","Negative clusters","Credit, security, app and support","Day-to-day expenses","The basics: security, speed, a human","met"]];
+    const lb = L==="es" ? ["Motivo dominante","Para qué usa el dinero","Qué pide"] : ["Main driver","What the money is for","What they ask for"];
+    return `<h3>${L==="es"?"Clientes en el cluster negativo, por segmento":"Customers in the negative cluster, by segment"}</h3><p class="sub">${L==="es"?"Score comportamental sobre la base total":"Behavioural score across the full base"}</p>
+    <div class="bars">${b.map(r=>`<div class="bar"><span>${r[0]}</span><div class="tr"><i style="width:${r[1]*2}%;background:var(--${r[2]}-f)"></i></div><em>${r[3]}</em></div>`).join("")}</div>
+    <div class="two">${c.map(r=>`<div class="p-${r[5]}"><h4>${r[0]}</h4><dl><dt>${r[1]} · ${lb[0]}</dt><dd>${r[2]}</dd><dt>${lb[1]}</dt><dd>${r[3]}</dd><dt>${lb[2]}</dt><dd>${r[4]}</dd></dl></div>`).join("")}</div>`;
+  },
+  empresas(){
+    const s = L==="es" ? [["33","empresas que retiraron fondos","¿Qué promesa se rompió?","met"],["10","entrevistas a grandes empresas","Integración vía APIs","eva"],["7","rubros en directorios","Los tiempos del dinero","dis"]] : [["33","companies that withdrew funds","Which promise broke?","met"],["10","interviews with large companies","API integration","eva"],["7","industries at board level","The timing of money","dis"]];
+    const l = L==="es" ? [["#6E8B5E","Listas para integrar","Tienen el problema, la urgencia y la capacidad."],["#C89B3C","En evaluación","Tienen el problema, pero no el timing."],["#B5583A","No listas","Ni pueden ni quieren atarse a un banco, por ahora."]] : [["#6E8B5E","Ready to integrate","They have the problem, the urgency and the capacity."],["#C89B3C","Evaluating","They have the problem, but not the timing."],["#B5583A","Not ready","They can't or won't tie themselves to a bank, for now."]];
+    return `<h3>${L==="es"?"Tres estudios, una estrategia B2B":"Three studies, one B2B strategy"}</h3><p class="sub">${L==="es"?"Del diagnóstico a la próxima propuesta":"From diagnosis to the next proposition"}</p>
+    <div class="tl" style="grid-template-columns:repeat(3,minmax(0,1fr))">${s.map(r=>`<div class="p-${r[3]}"><strong>${r[2]}</strong><b>${r[0]}</b>${r[1]}</div>`).join("")}</div>
+    <div class="lights">${l.map(r=>`<div style="--c:${r[0]}"><strong>${r[1]}</strong>${r[2]}</div>`).join("")}</div>`;
+  },
+  vendors(){
+    const g = L==="es" ? [["Gestión autónoma del catálogo",6.4],["Avisos de pedidos al local",5.7],["Seguimiento de repartidores",5.4]] : [["Self-serve catalogue management",6.4],["Order alerts to the store",5.7],["Courier tracking",5.4]];
+    const s = L==="es" ? [["Gestión del catálogo",2.86],["Seguimiento de repartidores",3.22],["Avisos de pedidos",3.72]] : [["Catalogue management",2.86],["Courier tracking",3.22],["Order alerts",3.72]];
+    const f = n => L==="es" ? String(n).replace(".",",") : n;
+    return `<h3>Opportunity gap</h3><p class="sub">${L==="es"?"Importancia vs. satisfacción: cuanto más alto, más urgente":"Importance vs. satisfaction: the higher, the more urgent"}</p>
+    <div class="bars">${g.map(r=>`<div class="bar"><span>${r[0]}</span><div class="tr"><i style="width:${r[1]*10}%;background:var(--dis-f)"></i></div><em>${f(r[1])}</em></div>`).join("")}</div>
+    <h3 style="margin-top:28px">${L==="es"?"Satisfacción actual (de 1 a 5)":"Current satisfaction (1 to 5)"}</h3><p class="sub">${L==="es"?"Las tareas peor resueltas hoy":"The tasks handled worst today"}</p>
+    <div class="bars">${s.map(r=>`<div class="bar"><span>${r[0]}</span><div class="tr"><i style="width:${r[1]*20}%;background:var(--met-f)"></i></div><em>${f(r[1])}</em></div>`).join("")}</div>`;
+  },
+  marketplace(){
+    const j = L==="es" ? [["Ficha","¿Será como en la foto?","Fotos reales, video y reseñas con imágenes"],["Vendedor","¿Es legítimo?","Reputación y compra protegida"],["Pago","¿Es seguro poner mi tarjeta?","Billeteras digitales y dinero en custodia"],["Envío","¿Cuándo llega?","Tracking en vivo y aviso de demoras"],["Post-compra","¿Y si vino mal?","Devolución simple y un humano que responde"]]
+      : [["Product page","Will it look like the photo?","Real photos, video and reviews with images"],["Seller","Is this legit?","Reputation and buyer protection"],["Payment","Is it safe to enter my card?","Digital wallets and escrow"],["Delivery","When will it arrive?","Live tracking and delay alerts"],["After purchase","What if it's wrong?","Easy returns and a human who answers"]];
+    return `<h3>${L==="es"?"Mostrar, no declarar":"Show, don't claim"}</h3><p class="sub">${L==="es"?"La duda en cada momento de riesgo y la evidencia que la disuelve":"The doubt at each moment of risk and the evidence that dissolves it"}</p>
+    <div class="jr">${j.map(r=>`<div><strong>${r[0]}</strong><q>${r[1]}</q>${r[2]}</div>`).join("")}</div>`;
+  },
+  ahorro(){
+    const s = L==="es" ? [["Segmentación","n=421","¿Quiénes son?","seg"],["Discovery","8 entrevistas","Invertir afuera","dis"],["Concepto","7 entrevistas","Plazo fijo de montos bajos","dis"],["Concepto","8 entrevistas","Ahorro por redondeo","dis"],["Experiencia","n=325","CSAT del depósito a plazo","eva"]]
+      : [["Segmentation","n=421","Who are they?","seg"],["Discovery","8 interviews","Investing abroad","dis"],["Concept","7 interviews","Low-minimum term deposit","dis"],["Concept","8 interviews","Round-up savings","dis"],["Experience","n=325","Term deposit CSAT","eva"]];
+    return `<h3>${L==="es"?"El recorrido del programa":"The programme's path"}</h3><p class="sub">${L==="es"?"Cada estudio alimentó al siguiente":"Each study fed the next"}</p>
+    <div class="tl">${s.map(r=>`<div class="p-${r[3]}">${r[0]}<b>${r[1]}</b>${r[2]}</div>`).join("")}</div>`;
+  },
+  cocina(){
+    const c = L==="es" ? ["Board de estrategia","Observación","Entrevistas","Journey map","Story mapping","Crazy 8","Prototipos","Usabilidad","Desarrollo","Implementación"] : ["Strategy board","Observation","Interviews","Journey map","Story mapping","Crazy 8s","Prototypes","Usability tests","Development","Rollout"];
+    const it = L==="es" ? [["Antes","Timers sin segundos: ¿hora o cuenta regresiva?"],["Después","Segundos visibles: la ambigüedad desaparece"]] : [["Before","Timers without seconds: clock time or countdown?"],["After","Seconds shown: the ambiguity is gone"]];
+    return `<h3>${L==="es"?"De punta a punta":"End to end"}</h3><p class="sub">${L==="es"?"El proceso completo, de la estrategia a los restaurantes":"The full process, from strategy to restaurants"}</p>
+    <div class="chain">${c.map(s=>`<span>${s}</span>`).join("<i>→</i>")}</div>
+    <div class="two">${it.map((r,i)=>`<div class="p-${i?"eva":"met"}"><h4>${r[0]}</h4>${r[1]}</div>`).join("")}</div>`;
+  }
+};
+
+function applyText(){
+  document.documentElement.lang = L;
+  document.querySelectorAll("[data-i]").forEach(el => el.textContent = t(el.dataset.i));
+  document.querySelectorAll("[data-ih]").forEach(el => el.innerHTML = t(el.dataset.ih));
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l===L));
+}
+function renderHome(){
+  $("#facts").innerHTML = FACTS[L].map(f => `<span><b>${f[0]}</b> ${f[1]}</span>`).join("");
+  const used = Object.keys(CATS).filter(k => CASES.some(c=>c.cats.includes(k)) || ARCHIVE.some(a=>a.cat===k));
+  $("#filters").innerHTML = `<button class="pill all" data-f="all" aria-pressed="${F==="all"}">${t("all")}</button>` + used.map(k => `<button class="pill p-${k}" data-f="${k}" aria-pressed="${F===k}">${x(CATS[k])}</button>`).join("");
+  $("#grid").innerHTML = CASES.map(c => `<a class="card${(F==="all"?!c.top:!c.cats.includes(F))?" hide":""}" href="#caso-${c.id}">
+    <div class="top" style="--img:url(${c.img})"><b>${c.stat.n}</b><span>${x(c.stat.l)}</span></div>
+    <div class="bd"><span class="meta">${c.year} · ${x(c.country)} · ${x(c.industry)}</span><h3>${x(c.t)}</h3><p>${x(c.hook)}</p>
+    <div class="tags">${c.cats.map(pc).join("")}</div><span class="more">${t("read")}</span></div></a>`).join("");
+  $("#archive").innerHTML = Object.keys(ERAS).map(e => {
+    const rows = ARCHIVE.filter(a => a.era===e && (F==="all"||a.cat===F));
+    return rows.length ? `<div class="era"><h4>${x(ERAS[e])}</h4>${rows.map(a => `<div class="row"><span class="y">${a.year}<br>${x(a.country)}</span><div><strong>${x(a.t)}</strong><p>${x(a.d)}</p></div>${pc(a.cat)}</div>`).join("")}</div>` : "";
+  }).join("");
+  $("#steps").innerHTML = STEPS[L].map(s => `<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+  $("#flow").innerHTML = FLOW[L].map((f,i) => `<div class="node${i===1?" ag":""}"><small>${f[0]}</small><b>${f[1]}</b></div>`).join(`<span class="arrow" aria-hidden="true">↓</span>`);
+}
+function renderCase(id){
+  const i = CASES.findIndex(c=>c.id===id), c = CASES[i];
+  if(!c){ route(); return; }
+  const n = CASES[(i+1)%CASES.length], k = c.cats[0];
+  $("#case").innerHTML = `<a class="back" href="#casos">${t("back")}</a>
+  <div class="ch"><div><div class="tags">${c.cats.map(pc).join("")}</div><h1>${x(c.t)}</h1><p class="hk">${x(c.hook)}</p></div>
+  <div class="bigstat p-${k}"><b>${c.stat.n}</b><span>${x(c.stat.l)}</span></div></div>
+  <div class="mgrid"><div><small>${t("m1")}</small>${c.year}</div><div><small>${t("m2")}</small>${x(c.country)}</div><div><small>${t("m3")}</small>${x(c.industry)}</div><div><small>${t("m4")}</small>${x(c.role)}</div></div>
+  <section class="sec"><h2>${t("s1")}</h2><div><p>${x(c.challenge)}</p></div></section>
+  <section class="sec"><h2>${t("s2")}</h2><div><p class="meta" style="margin:0 0 16px">${t("mm")}: ${x(c.method)}</p><ol class="did">${c.did[L].map(d=>`<li><span>${d}</span></li>`).join("")}</ol></div></section>
+  <section class="sec"><h2>${t("s3")}</h2><div class="vis">${VIS[c.vis]()}</div></section>
+  <section class="sec"><h2>${t("s4")}</h2><div class="finds">${c.found[L].map(f=>`<div class="find"><h3>${f[0]}</h3><p>${f[1]}</p></div>`).join("")}</div></section>
+  ${c.quote?`<section class="sec"><h2>${t("s6")}</h2><div><blockquote class="quote">“${x(c.quote)}”</blockquote><cite>${x(c.qby)}</cite></div></section>`:""}
+  <section class="sec"><h2>${t("s5")}</h2><div class="impact p-${k}"><p>${x(c.impact)}</p></div></section>
+  <div class="nextc"><a class="btn" href="#casos">${t("back")}</a><a class="btn solid" href="#caso-${n.id}">${t("next")} ${x(n.t)} →</a></div>`;
+}
+function route(){
+  const h = location.hash.slice(1);
+  const isCase = h.startsWith("caso-") && CASES.some(c=>c.id===h.slice(5));
+  $("#home").classList.toggle("hide", isCase);
+  $("#case").classList.toggle("hide", !isCase);
+  if(isCase){ renderCase(h.slice(5)); window.scrollTo(0,0); document.title = x(CASES.find(c=>c.id===h.slice(5)).t) + " · Martín Zlotnik"; }
+  else { document.title = "Martín Zlotnik · Research"; if(h){ const el=document.getElementById(h); if(el){ if(el.tagName==="DETAILS") el.open=true; el.scrollIntoView(); } } }
+}
+function all(){ applyText(); renderHome(); route(); }
+
+document.addEventListener("click", e => {
+  const lb = e.target.closest(".lang button");
+  if(lb){ L = lb.dataset.l; try{ localStorage.setItem("lang", L); }catch(err){} all(); return; }
+  const fb = e.target.closest("#filters button");
+  if(fb){ F = fb.dataset.f; renderHome(); return; }
+  if(e.target.closest("#copy")){
+    const b = $("#copy");
+    navigator.clipboard?.writeText($("#mail").textContent).then(()=>{ b.textContent = t("copied"); setTimeout(()=>b.textContent=t("cp"),1800); }).catch(()=>{});
+  }
+});
+window.addEventListener("hashchange", route);
+const vid=$("#bgv"), hw=$("#top"), hd=document.querySelector("header");
+
+
+function hdr(){ const onHome=!$("#home").classList.contains("hide"); const solid=!onHome || scrollY > hw.offsetHeight+$("#enfoque").offsetHeight-90; hd.classList.toggle("solid", solid); hd.classList.toggle("mid", !solid && scrollY>12); }
+addEventListener("scroll",hdr,{passive:true});
+$("#menu").addEventListener("click",()=>{ const o=hd.classList.toggle("open"); $("#menu").setAttribute("aria-expanded",o); });
+$("#nav").addEventListener("click",e=>{ if(e.target.closest("a")){ hd.classList.remove("open"); $("#menu").setAttribute("aria-expanded",false); } }); addEventListener("hashchange",()=>setTimeout(hdr,0)); hdr();
+if(matchMedia("(prefers-reduced-motion: reduce)").matches && vid) vid.pause();
+all();
+}
+
+/* ESTELA (trail del mouse): para quitarlo, borrar este bloque */
+(function(){
+  if(!matchMedia("(hover:hover) and (pointer:fine)").matches || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cv=document.createElement("canvas"); cv.id="trail"; cv.setAttribute("aria-hidden","true");
+  cv.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60";
+  document.body.appendChild(cv);
+  const cx=cv.getContext("2d"); let W,H,dpr; const pts=[]; const LIFE=600; let run=false;
+  function size(){ dpr=Math.min(devicePixelRatio||1,2); W=innerWidth; H=innerHeight; cv.width=W*dpr; cv.height=H*dpr; cx.setTransform(dpr,0,0,dpr,0,0); }
+  size(); addEventListener("resize",size);
+  const darks=[document.querySelector(".herowrap"),document.querySelector("#enfoque")].filter(Boolean);
+  function onDark(x,y){ return darks.some(el=>{ const r=el.getBoundingClientRect(); return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom; }); }
+  addEventListener("mousemove",e=>{ pts.push({x:e.clientX,y:e.clientY,t:performance.now()}); if(!run){ run=true; requestAnimationFrame(draw); } },{passive:true});
+  function draw(now){
+    while(pts.length&&now-pts[0].t>LIFE) pts.shift();
+    cx.clearRect(0,0,W,H);
+    if(pts.length>1){
+      const last=pts[pts.length-1], col=onDark(last.x,last.y)?"232,168,124":"160,82,45";
+      cx.lineCap="round"; cx.lineJoin="round";
+      for(let i=1;i<pts.length;i++){
+        const a=pts[i-1], b=pts[i], k=1-(now-b.t)/LIFE;
+        cx.strokeStyle=`rgba(${col},${(k*.55).toFixed(3)})`; cx.lineWidth=.5+k*3.5;
+        cx.beginPath(); cx.moveTo(a.x,a.y); cx.lineTo(b.x,b.y); cx.stroke();
+      }
+    }
+    if(pts.length) requestAnimationFrame(draw); else { run=false; cx.clearRect(0,0,W,H); }
+  }
+})();
+
+</script>
+</body>
+</html>
