@@ -6,6 +6,16 @@
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%231A1714%27/%3E%3Ctext x=%276%27 y=%2730%27 font-family=%27Georgia,serif%27 font-size=%2724%27 fill=%27%23FBF6EF%27%3EEME%3C/text%3E%3Ctext x=%2716%27 y=%2754%27 font-family=%27Georgia,serif%27 font-style=%27italic%27 font-size=%2724%27 fill=%27%23E8A87C%27%3Ezeta%3C/text%3E%3C/svg%3E">
 <title>Martín Zlotnik · Research</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://martinzlotnik.github.io/EMEzeta/">
+<meta property="og:title" content="Martín Zlotnik · Research + antropología">
+<meta property="og:description" content="Antropólogo y researcher estratégico. Research cualitativo y cuantitativo para estrategia, producto y experiencia.">
+<meta property="og:image" content="https://martinzlotnik.github.io/EMEzeta/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://martinzlotnik.github.io/EMEzeta/og.jpg">
 <meta name="description" content="Antropólogo y researcher estratégico. Research cualitativo y cuantitativo para producto, estrategia y negocio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,11 +55,13 @@ header:not(.solid) .logo{color:#FBF6EF}header:not(.solid) .logo small{color:rgba
 header:not(.solid) .lang button{color:rgba(251,246,239,.6)}header:not(.solid) .lang button[aria-pressed=true]{color:#fff}
 #case{padding-top:110px!important}
 header:not(.solid) nav .pill,.herowrap.dk .fr .pill{background:transparent;color:#FBF6EF;box-shadow:inset 0 0 0 1px rgba(251,246,239,.55);transition:background .2s}
+header.solid nav .pill{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(26,23,20,.35);transition:background .2s}
+header.solid nav .pill:hover{background:rgba(26,23,20,.06)}
 header:not(.solid) nav .pill:hover,.herowrap.dk .fr .pill:hover{background:rgba(251,246,239,.14)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
 .logo{font-family:var(--disp);font-weight:600;font-size:20px;line-height:1;letter-spacing:-.01em;text-decoration:none}
 .mark{display:block;font:400 28px/.86 "DM Serif Display",Georgia,serif;letter-spacing:.01em}.mark span{display:block}.mark i{display:block;font-style:italic;padding-left:.62em;color:var(--acc)}
-header:not(.solid) .mark i{color:#E8A87C}
+header:not(.solid) .mark i{color:#FF7518}
 .logo small{display:block;font:500 13px Inter,Arial,sans-serif;color:var(--mute);letter-spacing:0;margin-top:8px}
 nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .pill{display:inline-flex;align-items:center;min-height:36px;padding:6px 14px;border-radius:999px;text-decoration:none;font-size:15px;border:0;white-space:nowrap}
@@ -243,9 +255,9 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
 .herowrap video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(250,245,238,.86),rgba(250,245,238,.78) 55%,rgba(250,245,238,.92))}
 .herowrap .facts{border-top-color:rgba(26,23,20,.15)}
-.herowrap.dk .veil{background:linear-gradient(180deg,rgba(16,11,7,.62) 0%,rgba(16,11,7,.50) 35%,rgba(16,11,7,.66) 70%,rgba(16,11,7,.88) 100%)}
+.herowrap.dk .veil{background:linear-gradient(180deg,rgba(14,16,18,.45) 0%,rgba(14,16,18,.28) 35%,rgba(14,16,18,.50) 70%,rgba(14,16,18,.84) 100%)}
 .herowrap.dk .hero h1{text-shadow:0 2px 30px rgba(0,0,0,.35)}
-.herowrap.dk{color:#FBF6EF}.herowrap.dk .hero h1 .v{color:#E8A87C}.herowrap.dk .hero p{color:rgba(251,246,239,.85)}
+.herowrap.dk{color:#FBF6EF}.herowrap.dk .hero h1 .v{color:#FF7518}.herowrap.dk .hero p{color:rgba(251,246,239,.85)}
 .herowrap.dk .facts{border-top-color:rgba(255,255,255,.25);color:rgba(251,246,239,.75)}.herowrap.dk .facts b{color:#fff}
 @media(prefers-reduced-motion:reduce){.herowrap video{display:none}.herowrap{background:url(video.jpg) center/cover}}
 .cbox{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
@@ -286,16 +298,82 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
  .ch h1{font-size:clamp(34px,9vw,44px)}
  .nextc a.btn{width:100%;justify-content:center;text-align:center}
 }
+
+/* FONDO FOTO EN SOBRE MI */
+#sobre.sbg{position:relative;isolation:isolate;background:#17120d;color:#F3EDE5}
+#sobre.sbg .abt,#sobre.sbg .cbox{text-shadow:0 1px 14px rgba(0,0,0,.45)}
+#sobre.sbg::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--sbg) center/cover no-repeat}
+#sobre.sbg::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,20,22,.55),rgba(14,20,22,.35) 30%,rgba(14,20,22,.55) 50%,rgba(14,20,22,.62))}
+#sobre.sbg .kick{color:rgba(243,237,229,.62)}
+#sobre.sbg h2,#sobre.sbg .bio p:first-child,#sobre.sbg .cbox h3{color:#F3EDE5}
+#sobre.sbg .bio p+p{color:rgba(243,237,229,.74)}
+#sobre.sbg .cbox{border-top-color:rgba(243,237,229,.18)}
+#sobre.sbg .cbox h3 .v{color:#FF7518}
+#sobre.sbg .mail{color:#F3EDE5}
+#sobre.sbg .btn{border-color:rgba(243,237,229,.85);color:#F3EDE5}
+#sobre.sbg .btn.solid{background:#F3EDE5;color:#17120d;border-color:#F3EDE5}
+#sobre.bg-montes{--sbg:url(img/bg-montes.jpg)}
+#sobre.sbg{padding-bottom:0;padding-top:clamp(150px,13vw,200px)}
+header.glass{background:rgba(14,20,22,.38);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(243,237,229,.08)}
+.sfoot{margin-top:clamp(56px,7vw,96px);padding-top:24px;padding-bottom:36px;border-top:1px solid rgba(243,237,229,.16);font-size:14px;color:rgba(243,237,229,.62)}
+#home:not(.hide)~footer{display:none}
+/* etiquetas solo con borde */
+.pill:is(.p-est,.p-seg,.p-dis,.p-eva,.p-met,.p-lid,.p-pro,.p-exp){background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(26,23,20,.32)}
+.filters button.pill{border:0;box-shadow:inset 0 0 0 1px rgba(26,23,20,.32);color:var(--ink)}
+.filters button.pill[aria-pressed=true]{background:var(--ink);color:var(--bg);box-shadow:none}
+.t-bridge #enfoque .pill{color:#F3EDE5;box-shadow:inset 0 0 0 1px rgba(243,237,229,.45)}
+
+/* CARRUSEL DE CASOS */
+#grid{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:4px}
+#grid::-webkit-scrollbar{display:none}
+#grid>.card{flex:0 0 calc((100% - 20px)/2);scroll-snap-align:start;min-width:0}
+.carnav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px}
+.carbtn{width:44px;height:44px;border-radius:50%;border:0;background:transparent;box-shadow:inset 0 0 0 1px rgba(26,23,20,.32);color:var(--ink);font-size:18px;cursor:pointer;transition:background .2s}
+.carbtn:hover{background:rgba(26,23,20,.06)}
+.dots{display:flex;gap:8px}
+.dots button{width:28px;height:4px;border:0;border-radius:2px;background:rgba(26,23,20,.18);padding:0;cursor:pointer;position:relative;overflow:hidden}
+.dots button[aria-current=true]{background:rgba(26,23,20,.18)}
+.dots button[aria-current=true]::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:left;animation:cfill var(--cdur,6s) linear forwards}
+.car.paused .dots button[aria-current=true]::after,.car.still .dots button[aria-current=true]::after{animation:none}
+@keyframes cfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.carnav.one{display:none}
+@media(max-width:760px){#grid>.card{flex-basis:86%}}
+
+/* CARDS COMPACTAS */
+#grid>.card{flex:0 0 calc((100% - 40px)/2.14)}
+.card .top{aspect-ratio:auto;height:clamp(150px,27vh,230px);padding:20px 24px 18px}
+.card .top b{font-size:clamp(36px,4.2vw,54px)}
+.card .top span{font-size:14px}
+.card .bd{padding:16px 24px 18px;gap:7px}
+.card .meta{font-size:13px}
+.card h3{font-size:21px}
+.card p.cq{font-size:15px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cfoot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:6px}
+.cfoot .tags{margin:0}
+.cfoot .more{margin:0;white-space:nowrap}
+#casos .filters{margin-bottom:20px}
+.carnav{margin-top:16px}
+.carbtn{width:40px;height:40px}
+@media(max-width:760px){#grid>.card{flex-basis:86%}.card .top{height:180px}}
+
+/* AJUSTES CELULAR */
+@media(max-width:760px){
+  #casos .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  #casos .filters::-webkit-scrollbar{display:none}
+  #casos .filters .pill{flex:none}
+  #grid{align-items:flex-start}
+  #sobre.sbg{padding-top:112px}
+  .dots{gap:6px}.dots button{width:18px}
+}
 </style>
 </head>
 <body class="t-bridge">
 <header><div class="wrap hd">
-  <a class="logo" href="#top" aria-label="EMEZETA · Martín Zlotnik"><span class="mark"><span>EME</span><i>zeta</i></span><small data-i="role">Research con mirada antropológica</small></a>
+  <a class="logo" href="#top" aria-label="EMEZETA · Martín Zlotnik"><span class="mark"><span>EME</span><i>zeta</i></span><small data-i="role">Research + antropología</small></a>
   <button class="menu" id="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span class="sr" data-i="mn">Menú</span></button>
   <nav aria-label="Principal" id="nav">
     <a class="pill p-est" href="#casos" data-i="n1">Casos</a>
     <a class="pill p-seg" href="#enfoque" data-i="n2">Enfoque</a>
-    <a class="pill p-eva" href="#lab" data-i="n3">Laboratorio</a>
     <a class="pill p-dis" href="#sobre" data-i="n4">Sobre mí</a>
     <div class="lang" role="group" aria-label="Idioma / Language"><button data-l="es" aria-pressed="true">ES</button><button data-l="en" aria-pressed="false">EN</button></div>
   </nav>
@@ -311,7 +389,7 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
     <h1><span data-i="h1a">Ayudo a negocios y marcas a entender a sus clientes</span><span class="v" data-i="h1c">a través del comportamiento humano.</span></h1>
     <p data-i="hp">Research cuantitativo y cualitativo para que la propuesta de valor de tu negocio, marca y productos esté centrada en tus clientes.</p>
   </div>
-  <div class="facts"><div class="fl" id="facts"></div><div class="fr"><a class="pill p-met" href="#contacto" data-i="cta1">Escribime</a><a class="pill p-lid" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a></div></div>
+  <div class="facts"><div class="fl" id="facts"></div><div class="fr"><a class="pill p-met" href="#contacto" data-i="cta1">Escribime</a><a class="pill p-lid" href="https://www.linkedin.com/in/mart%C3%ADnzlotnik/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </div>
 </section>
 
@@ -320,9 +398,9 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
   <p class="kick"><span class="pill p-seg" data-i="k1">Enfoque</span></p>
   <h2 data-i="w0">Maneras en que te puedo ayudar</h2>
   <div class="three">
-    <div class="what"><span class="pill p-est" data-i="c-est">Estrategia y mercado</span><h3 data-i="w1t">Dónde está la oportunidad</h3><p data-i="w1">Mercado, cultura, segmentación y tendencias para entender dónde jugar antes de diseñar.</p></div>
-    <div class="what"><span class="pill p-dis" data-i="c-dis">Discovery y producto</span><h3 data-i="w2t">Qué construir y cómo funciona</h3><p data-i="w2">Discovery, tests de concepto, usabilidad y arquitectura de información, codo a codo con producto y diseño.</p></div>
-    <div class="what"><span class="pill p-met" data-i="c-met">Métricas y datos</span><h3 data-i="w3t">Qué dicen los datos y por qué</h3><p data-i="w3">Combinación de datos comportamentales con datos declarativos para tener una visión holística del problema.</p></div>
+    <div class="what"><span class="pill p-est" data-i="c-est">Estrategia</span><h3 data-i="w1t">Dónde está la oportunidad</h3><p data-i="w1">Foundational research, market fit, cultura, segmentación y tendencias para decidir dónde jugar y a quién hablarle antes de diseñar.</p></div>
+    <div class="what"><span class="pill p-dis" data-i="c-dis">Producto</span><h3 data-i="w2t">Qué y cómo construir</h3><p data-i="w2">Product discovery research, tests de concepto, usabilidad y priorización con evidencia, codo a codo con producto y diseño.</p></div>
+    <div class="what"><span class="pill p-met" data-i="c-met">Experiencia</span><h3 data-i="w3t">Cómo se usa lo construido</h3><p data-i="w3">Experience evaluative research, journey maps, blueprints, métricas de satisfacción y datos de comportamiento para entender el porqué detrás de cada movimiento.</p></div>
   </div>
 </div></section>
 
@@ -331,7 +409,8 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
   <h2 data-i="cs">Casos seleccionados</h2>
   <p class="lead" data-i="csl">Seleccioná el caso que más te interese.</p>
   <div class="filters" id="filters" role="group" aria-label="Filtrar"></div>
-  <div class="grid" id="grid"></div>
+  <div class="car" id="car"><div class="grid" id="grid" aria-live="off"></div>
+  <div class="carnav"><button class="carbtn" id="cprev" aria-label="Anterior">←</button><div class="dots" id="cdots"></div><button class="carbtn" id="cnext" aria-label="Siguiente">→</button></div></div>
 </div></section>
 
 <section class="band alt" id="proceso"><div class="wrap">
@@ -343,27 +422,26 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
 <section class="band" id="mas"><div class="wrap">
   <details class="arch" id="archd"><summary><h3 data-i="ar">Más trabajo</h3><span class="tog" aria-hidden="true"></span></summary><div id="archive"></div></details>
   <details class="arch" id="lab"><summary><h3 data-i="k4">Laboratorio</h3><span class="tog" aria-hidden="true"></span></summary>
-    <div class="lab labin"><div><h2 data-i="lb">Un agente de análisis entrenado con metodología</h2><p class="lead" data-i="lbp"></p></div><div class="flow" id="flow"></div></div>
+    <div class="lab labin"><div><p class="kick" data-i="lbk">Fast paced research</p><h2 data-i="lb">Un agente de análisis entrenado con metodología</h2><p class="lead" data-i="lbp"></p></div><div class="flow" id="flow"></div></div>
   </details>
 </div></section>
 
 
 
-<section class="band alt" id="sobre"><div class="wrap about">
+<section class="band sbg bg-montes" id="sobre"><div class="wrap about">
   <div class="aside">
   <div class="photo"><span class="ini">MZ</span><img src="foto.jpg" alt="Martín Zlotnik" onerror="this.remove()"></div>
   <div class="cbox" id="contacto">
     <h3><span data-i="ct">Las mejores decisiones empiezan por una buena pregunta.</span> <span class="v" data-i="ct2">Hablemos.</span></h3>
-    <a class="mail" id="mail" href="mailto:tinchozlotnik@gmail.com">tinchozlotnik@gmail.com</a>
-    <div class="cbtn"><button class="btn solid" id="copy" data-i="cp">Copiar mail</button><a class="btn" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a><a class="btn" href="cv.pdf" data-i="cv2">Descargar CV</a></div>
+    <div class="cbtn"><button class="btn solid" id="copy" data-i="cp">Copiar mail</button><a class="btn" href="https://www.linkedin.com/in/mart%C3%ADnzlotnik/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="cv.pdf" download="Martin_Zlotnik_CV.pdf" data-i="cv2">Descargar CV</a></div>
   </div>
   </div>
   <div class="abt">
     <p class="kick" data-i="k5">Sobre mí</p>
     <h2 data-i="ab">Martín Zlotnik</h2>
-    <div class="bio" data-ih="abp"><p>Siempre me atrajo el porqué detrás de lo que hace la gente: por qué confía en un producto y no en otro, por qué deja de usar una app que antes le encantaba, por qué el dinero significa algo distinto según quién lo tenga. La antropología me enseñó a construir esas preguntas para obtener esas respuestas. El research y el trabajo de producto, a convertirlas en decisiones.</p><p>Mi último rol fue como Senior UX &amp; Strategic Researcher en un gran grupo latinoamericano de banca, fintech, delivery, retail y turismo. En el último tramo me acerqué al lado de producto y datos: métricas de salud de clientes, segmentación comportamental y análisis de churn, para ayudar a los equipos a entender no solo qué dicen los números, sino qué pasa detrás de ellos. Antes estuve haciendo research para una software factory y para una agencia con clientes de consumo masivo.</p><p>Soy antropólogo social y cultural, egresado de la UBA. Hice cursos y capacitaciones en estadística aplicada, UX Research y UX Design.</p><p>Hoy estoy abierto a roles en research, estrategia de producto o product insights, y a conversar con equipos que quieran entender mejor a sus usuarios.</p></div>
+    <div class="bio" data-ih="abp"><p>Siempre me atrajo el porqué detrás de lo que hace la gente: por qué confía en un producto y no en otro, por qué deja de usar una app que antes le encantaba, por qué el dinero significa algo distinto según quién lo tenga. La antropología me enseñó a construir esas preguntas para obtener esas respuestas. El research y el trabajo de producto, a convertirlas en decisiones.</p><p>Mi último rol fue como Senior UX &amp; Strategic Researcher en un gran grupo latinoamericano de banca, fintech, delivery, retail y turismo. En el último tramo me acerqué al lado de producto y datos: métricas de salud de clientes, segmentación comportamental y análisis de churn, para ayudar a los equipos a entender no solo qué dicen los números, sino qué pasa detrás de ellos. Antes estuve haciendo research para una software factory y para una agencia con clientes de consumo masivo.</p><p>Soy antropólogo social y cultural, egresado de la UBA. Hice cursos y capacitaciones en estadística aplicada, UX Research y UX Design.</p></div>
   </div>
-</div></section>
+</div><div class="wrap"><div class="sfoot" data-i="ft">© 2026 Martín Zlotnik · Buenos Aires</div></div></section>
 
 
 </main>
@@ -381,28 +459,25 @@ nav .pill{min-height:34px;padding:5px 12px;font-size:14px}}
                eva = Evaluativo · met = Métricas y datos · lid = Liderazgo y ResearchOps */
 
 const CATS = {
-  est: { es: "Estrategia y mercado", en: "Strategy & market" },
-  seg: { es: "Segmentación", en: "Segmentation" },
-  dis: { es: "Discovery", en: "Discovery" },
-  eva: { es: "Evaluativo", en: "Evaluative" },
-  met: { es: "Métricas y datos", en: "Metrics & data" },
-  lid: { es: "ResearchOps", en: "ResearchOps" }
+  est:{es:"Estrategia",en:"Strategy"},
+  pro:{es:"Producto",en:"Product"},
+  exp:{es:"Experiencia",en:"Experience"}
 };
 
 const CASES = [
 {
-  id: "turismo", img: "img/turismo.jpg", top: true, vis: "turismo", cats: ["seg", "est"], year: "2026",
+  id: "turismo", q:{es:"¿Cómo pasamos de vender pasajes a tener clientes que vuelvan?",en:"How do we go from selling tickets to having customers who come back?"}, img: "img/turismo.jpg", top: true, vis: "turismo", cats: ["est"], year: "2026",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "Turismo", en: "Travel" },
-  method: { es: "Mixto · 21 entrevistas + 292 encuestas + desk research", en: "Mixed · 21 interviews + 292 surveys + desk research" },
-  stat: { n: "4", l: { es: "escenarios de viaje en lugar de perfiles fijos", en: "travel scenarios instead of fixed personas" } },
+  method: { es: "Mixto · entrevistas + encuestas + desk research", en: "Mixed · interviews + surveys + desk research" },
+  stat: { n: "40%", l: { es: "de los viajeros prioriza la relación con su agente", en: "of travelers prioritize their relationship with their agent" } },
   t: { es: "Escenarios, no personas", en: "Scenarios, not personas" },
   hook: { es: "Repensar la segmentación de un grupo de agencias de turismo: segmentar por modos de viajar para pasar de vender pasajes a construir lealtad.", en: "Rethinking how a group of travel agencies segments its customers: modes of travel instead of fixed profiles, to move from selling tickets to building loyalty." },
   role: { es: "Research Lead", en: "Research Lead" },
   challenge: { es: "Un grupo de agencias de turismo necesitaba una segmentación compartida entre operaciones, comercial, marketing y producto digital. Segmentar por destino y precio no explicaba por qué algunas personas volvían a comprar y otras no.", en: "A group of travel agencies needed one segmentation shared by operations, sales, marketing and digital product. Segmenting by destination and price didn't explain why some people came back and others didn't." },
   did: {
-    es: ["21 entrevistas en profundidad con clientes de tres agencias del grupo y con clientes del banco del ecosistema que no eran clientes de turismo.", "Encuesta a 292 clientes para dimensionar cada escenario.", "Desk research sobre el turismo como motor económico y las tendencias de viaje del país.", "Un marco teórico propio que cruza dos tensiones (descarga vs. control, con el sistema vs. por mi cuenta) con las necesidades dominantes de cada viaje."],
-    en: ["21 in-depth interviews with customers of three agencies in the group, plus banking customers from the same ecosystem who weren't travel customers.", "A survey of 292 customers to size each scenario.", "Desk research on tourism as an economic engine and on local travel trends.", "An original framework crossing two tensions (letting go vs. control, through the system vs. on my own) with the dominant need behind each trip."]
+    es: ["21 entrevistas en profundidad con clientes de tres agencias del grupo y con clientes del banco del ecosistema que no eran clientes de turismo.", "Encuesta a 478 clientes para dimensionar cada escenario.", "Desk research sobre el turismo como motor económico y las tendencias de viaje del país.", "Un marco teórico propio que cruza dos tensiones (descarga vs. control, con el sistema vs. por mi cuenta) con las necesidades dominantes de cada viaje."],
+    en: ["21 in-depth interviews with customers of three agencies in the group, plus banking customers from the same ecosystem who weren't travel customers.", "A survey of 478 customers to size each scenario.", "Desk research on tourism as an economic engine and on local travel trends.", "An original framework crossing two tensions (letting go vs. control, through the system vs. on my own) with the dominant need behind each trip."]
   },
   found: {
     es: [["Lo que cambia es el escenario, no la persona", "Una misma persona puede ser cuatro clientes distintos según el momento que atraviesa. Por eso propusimos segmentar por escenarios y no por personas."], ["Cada escenario le pide un rol distinto a la agencia", "Curadora, organizadora del grupo, disparadora de oportunidades o solucionadora operativa."], ["La lealtad no se reparte igual", "En el viaje ritual el 54% quiere una relación fuerte con su vendedor. En el constitutivo, el 36% prefiere no tener ninguna: es el escenario con más potencial para la compra online autónoma."], ["El boca a boca pesa en todos", "Entre el 46% y el 53% de cada escenario decide por recomendación y confianza."]],
@@ -413,7 +488,7 @@ const CASES = [
   qby: { es: "Clienta, viaje constitutivo", en: "Customer, self-defining trip" }
 },
 {
-  id: "reintegro", img: "img/reintegro.jpg", top: true, vis: "reintegro", cats: ["met", "eva"], year: "2026",
+  id: "reintegro", q:{es:"¿Cómo usan los clientes el beneficio, y por qué algunos lo usan sin percibirlo?",en:"How do customers use the benefit, and why do some use it without noticing?"}, img: "img/reintegro.jpg", top: true, vis: "reintegro", cats: ["exp"], year: "2026",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "Fintech", en: "Fintech" },
   method: { es: "Cuanti · 686 respuestas cruzadas con uso real", en: "Quant · 686 responses matched to real usage" },
@@ -434,18 +509,18 @@ const CASES = [
   quote: null
 },
 {
-  id: "retencion", img: "img/retencion.jpg", vis: "retencion", cats: ["met", "seg"], year: "2025–2026",
+  id: "retencion", q:{es:"¿Cómo hacemos para que la plata entre al banco y no se vaya enseguida?",en:"How do we get money to come into the bank and stay there?"}, img: "img/retencion.jpg", vis: "retencion", cats: ["exp", "est"], year: "2025–2026",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "Fintech", en: "Fintech" },
-  method: { es: "Mixto · modelo de comportamiento sobre la base total + encuesta (n=175) cruzada por cluster + estudio de activación", en: "Mixed · behavioural model over the full base + survey (n=175) matched by cluster + activation study" },
-  stat: { n: "2", l: { es: "motores de fuga distintos que piden dos estrategias", en: "different drivers of outflow that call for two strategies" } },
+  method: { es: "Mixto · modelo de comportamiento sobre la base total + encuesta (n=350) cruzada por cluster + estudio de activación", en: "Mixed · behavioural model over the full base + survey (n=350) matched by cluster + activation study" },
+  stat: { n: "75%", l: { es: "abrió la cuenta buscando un préstamo; solo 36% por los beneficios", en: "opened the account looking for a loan; only 36% for the benefits" } },
   t: { es: "Por qué se va el dinero", en: "Why the money leaves" },
   hook: { es: "Activación y fuga de fondos en un banco digital: datos de comportamiento y la voz del cliente para entender por qué la gente usa el banco como puente.", en: "Activation and fund outflow at a digital bank: behavioural data and the customer's voice to understand why people use the bank as a bridge." },
   role: { es: "Researcher en un equipo de Producto + Research: integración de fuentes y lectura cuali-cuanti", en: "Researcher in a Product + Research team: source integration and qual-quant synthesis" },
   challenge: { es: "Un banco digital veía dos síntomas del mismo problema: cuentas que se abrían y nunca se activaban, y clientes activos que sacaban su dinero hacia otros bancos. La pregunta era cómo se manifiesta esa fuga y qué la explica.", en: "A digital bank saw two symptoms of one problem: accounts that were opened but never activated, and active customers moving their money to other banks. The question was how that outflow shows up and what explains it." },
   did: {
-    es: ["Estudio de activación: por qué las cuentas nuevas no hacen su primer uso.", "Análisis de la base total con un score comportamental de machine learning (5 clusters) y un indicador de transferencias a cuentas propias en otros bancos, cruzado por segmento, edad, región, antigüedad, engagement y cobro de sueldo.", "Encuesta a 175 clientes cruzada con su cluster: motivos para dejar el banco, destino del dinero y qué haría falta para elegirlo."],
-    en: ["An activation study: why new accounts never make their first transaction.", "Analysis of the full customer base with a machine-learning behavioural score (5 clusters) and an indicator of transfers to own accounts at other banks, crossed by segment, age, region, tenure, engagement and salary deposit.", "A survey of 175 customers matched to their cluster: reasons to leave, where the money goes and what would make them choose the bank."]
+    es: ["Estudio de activación: por qué las cuentas nuevas no hacen su primer uso.", "Análisis de la base total con un score comportamental de machine learning (5 clusters) y un indicador de transferencias a cuentas propias en otros bancos, cruzado por segmento, edad, región, antigüedad, engagement y cobro de sueldo.", "Encuesta a 350 clientes cruzada con su cluster: motivos para dejar el banco, destino del dinero y qué haría falta para elegirlo."],
+    en: ["An activation study: why new accounts never make their first transaction.", "Analysis of the full customer base with a machine-learning behavioural score (5 clusters) and an indicator of transfers to own accounts at other banks, crossed by segment, age, region, tenure, engagement and salary deposit.", "A survey of 350 customers matched to their cluster: reasons to leave, where the money goes and what would make them choose the bank."]
   },
   found: {
     es: [["Vienen a buscar un banco y no lo encuentran", "El 75% abrió la cuenta interesado en préstamos y solo el 36% vino por los beneficios. El 32% no la usa porque no pudo acceder a un préstamo o una tarjeta."], ["La fuga se concentra en los segmentos de entrada", "Los segmentos premium tienen entre 8% y 14% de clientes en el cluster negativo; los masivos llegan a 26% y 43%."], ["Cobrar el sueldo no retiene", "Acreditar el sueldo mejora el score, pero no frena las transferencias: el cliente puede estar activo y usar el banco solo como puente."], ["Dos desfondeos distintos", "En el extremo satisfecho la fuga es de crecimiento (busca crédito o inversión afuera). En el insatisfecho es de desconfianza (seguridad, app, atención)."]],
@@ -455,7 +530,7 @@ const CASES = [
   quote: null
 },
 {
-  id: "empresas", img: "img/empresas.jpg", vis: "empresas", cats: ["dis", "est"], year: "2025–2026",
+  id: "empresas", q:{es:"¿Qué necesita una empresa para quedarse con nosotros y, además, integrarse?",en:"What does a company need to stay with us, and to integrate with us?"}, img: "img/empresas.jpg", vis: "empresas", cats: ["est", "exp"], year: "2025–2026",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "Banca empresas · B2B", en: "Business banking · B2B" },
   method: { es: "Cuali · 33 empresas + 10 entrevistas a grandes empresas + entrevistas a directorios y ejecutivos", en: "Qual · 33 companies + 10 interviews with large companies + board and account manager interviews" },
@@ -477,7 +552,7 @@ const CASES = [
   qby: { es: "Administración, gran empresa", en: "Administration, large company" }
 },
 {
-  id: "vendors", img: "img/vendors.jpg", vis: "vendors", cats: ["dis", "met"], year: "2025",
+  id: "vendors", q:{es:"¿Qué construimos primero para que los comercios se gestionen solos?",en:"What do we build first so merchants can manage themselves?"}, img: "img/vendors.jpg", vis: "vendors", cats: ["pro"], year: "2025",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "Delivery · B2B", en: "Food delivery · B2B" },
   method: { es: "Mixto · encuentros con comercios + encuesta de opportunity gap + MoSCoW", en: "Mixed · merchant sessions + opportunity gap survey + MoSCoW" },
@@ -499,10 +574,10 @@ const CASES = [
   qby: { es: "Comercio gastronómico", en: "Restaurant owner" }
 },
 {
-  id: "marketplace", img: "img/marketplace.jpg", top: true, vis: "marketplace", cats: ["dis", "met", "eva"], year: "2026",
+  id: "marketplace", q:{es:"¿Por qué la gente entra al marketplace pero no compra?",en:"Why do people visit the marketplace but not buy?"}, img: "img/marketplace.jpg", top: true, vis: "marketplace", cats: ["pro", "exp"], year: "2026",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "E-commerce", en: "E-commerce" },
-  method: { es: "Mixto · 17 entrevistas + priorización + navegación + funnels + tickets de soporte", en: "Mixed · 17 interviews + prioritisation + navigation + funnels + support tickets" },
+  method: { es: "Mixto · entrevistas en profundidad + priorización + navegación + funnels + tickets de soporte", en: "Mixed · in-depth interviews + prioritisation + navigation + funnels + support tickets" },
   stat: { n: "94%", l: { es: "de las primeras compras son de un solo ítem", en: "of first purchases are a single item" } },
   t: { es: "Confianza y seguridad: las dos monedas de la compra online", en: "Trust and safety: the two currencies of online shopping" },
   hook: { es: "Por qué un marketplace que ya existe no alcanza para que la gente compre, y qué evidencia necesita ver el usuario en cada momento de riesgo.", en: "Why a marketplace existing isn't enough for people to buy there, and what evidence users need to see at each moment of risk." },
@@ -520,10 +595,10 @@ const CASES = [
   quote: null
 },
 {
-  id: "ahorro", img: "img/ahorro.jpg", top: true, vis: "ahorro", cats: ["seg", "dis", "eva"], year: "2024–2025",
+  id: "ahorro", q:{es:"¿Cómo hacemos para volver más cercanos a la gente nuestros productos de ahorro e inversión?",en:"How do we make our savings and investment products feel closer to people?"}, img: "img/ahorro.jpg", top: true, vis: "ahorro", cats: ["est", "pro"], year: "2024–2025",
   country: { es: "Paraguay", en: "Paraguay" },
   industry: { es: "Fintech", en: "Fintech" },
-  method: { es: "Mixto · 5 estudios, 746 encuestas y 23 entrevistas", en: "Mixed · 5 studies, 746 surveys and 23 interviews" },
+  method: { es: "Métodos mixtos, cuantitativos y cualitativos · 5 estudios", en: "Mixed methods, quantitative and qualitative · 5 studies" },
   stat: { n: "5", l: { es: "estudios encadenados durante un año en una misma vertical", en: "linked studies over one year in a single vertical" } },
   t: { es: "Un año de research para ahorro e inversión", en: "A year of research for savings and investment" },
   hook: { es: "De segmentar a testear conceptos: cómo ahorra (y por qué no ahorra) la clase media en un mercado con poca cultura de inversión.", en: "From segmentation to concept tests: how the middle class saves (and why it doesn't) in a market with little investment culture." },
@@ -542,7 +617,7 @@ const CASES = [
   qby: { es: "Participante, test de concepto", en: "Participant, concept test" }
 },
 {
-  id: "cocina", img: "img/cocina.jpg", vis: "cocina", cats: ["dis", "eva"], year: "2023–2024",
+  id: "cocina", q:{es:"¿Qué herramienta necesita el crew para cocinar a tiempo y con menos desperdicio?",en:"What tool does the crew need to cook on time and with less waste?"}, img: "img/cocina.jpg", vis: "cocina", cats: ["pro"], year: "2023–2024",
   country: { es: "Argentina", en: "Argentina" },
   industry: { es: "Food service", en: "Food service" },
   method: { es: "Cuali · observación + entrevistas + journey + story mapping + pruebas de usabilidad", en: "Qual · observation + interviews + journey + story mapping + usability tests" },
@@ -565,25 +640,25 @@ const CASES = [
 ];
 
 const ARCHIVE = [
-  { era: "gv", year: "2026", cat: "eva", country: { es: "Paraguay", en: "Paraguay" },
+  { era: "gv", year: "2026", cat: "pro", country: { es: "Paraguay", en: "Paraguay" },
     t: { es: "La home de una app bancaria a una semana del lanzamiento", en: "A banking app's home screen one week after launch" },
     d: { es: "9 entrevistas con tareas en pantalla. Funciona para quien quiere ver todo de un vistazo; el perfil transaccional no descubre lo nuevo. Insumo para los ajustes post-lanzamiento.", en: "9 interviews with on-screen tasks. It works for people who want everything at a glance; transactional users don't discover what's new. Input for post-launch fixes." } },
-  { era: "gv", year: "2026", cat: "eva", country: { es: "Paraguay", en: "Paraguay" },
+  { era: "gv", year: "2026", cat: "pro", country: { es: "Paraguay", en: "Paraguay" },
     t: { es: "¿Dónde buscarías una silla gamer?", en: "Where would you look for a gaming chair?" },
     d: { es: "Tree test de la arquitectura de un marketplace (~75 participantes). Los botines llegaron a destino en el 66% de los casos y los insumos de costura en el 11%: evidencia para reestructurar las categorías ambiguas.", en: "Tree test of a marketplace's architecture (~75 participants). Football boots were found 66% of the time and sewing supplies 11%: evidence to restructure ambiguous categories." } },
-  { era: "gv", year: "2026", cat: "met", country: { es: "Paraguay", en: "Paraguay" },
+  { era: "gv", year: "2026", cat: "exp", country: { es: "Paraguay", en: "Paraguay" },
     t: { es: "Pagos cashless en eventos masivos", en: "Cashless payments at large events" },
     d: { es: "Encuesta (n=145) con estimación por intervalos: la adopción ya estaba resuelta (73% a 86%, con 95% de confianza) y la fricción estaba en consultar y recuperar el saldo, que quedó como condición para escalar.", en: "Survey (n=145) with interval estimation: adoption was already solved (73% to 86%, 95% confidence) and the friction was in checking and recovering the balance, which became a condition for scaling." } },
-  { era: "sh", year: "2024", cat: "dis", country: { es: "Argentina", en: "Argentina" },
+  { era: "sh", year: "2024", cat: "est", country: { es: "Argentina", en: "Argentina" },
     t: { es: "Una profesión en crisis silenciosa", en: "A profession in quiet crisis" },
     d: { es: "Research fundacional para un colegio de veterinarios: tendencias, etnografía rápida en una feria agroindustrial, 14 entrevistas y 85 encuestas. Los 14 entrevistados usarían una comunidad digital, que pasó a ser el MVP.", en: "Foundational research for a veterinary association: trends, rapid ethnography at an agribusiness fair, 14 interviews and 85 surveys. All 14 interviewees would use a digital community, which became the MVP." } },
-  { era: "sh", year: "2024", cat: "met", country: { es: "Argentina", en: "Argentina" },
+  { era: "sh", year: "2024", cat: "exp", country: { es: "Argentina", en: "Argentina" },
     t: { es: "Por qué se pierde el 99,5% del tráfico antes de pagar", en: "Why 99.5% of traffic drops before paying" },
     d: { es: "Funnel del carrito de una cadena de gimnasios contra benchmarks del sector (0,5% vs. 1,3% a 3%). La mayor caída estaba entre la home y la elección de plan; derivó en un plan de testing A/B.", en: "A gym chain's checkout funnel against industry benchmarks (0.5% vs. 1.3% to 3%). The biggest drop was between the home page and plan selection; it led to an A/B testing plan." } },
-  { era: "sh", year: "2023–2024", cat: "eva", country: { es: "Argentina", en: "Argentina" },
+  { era: "sh", year: "2023–2024", cat: "pro", country: { es: "Argentina", en: "Argentina" },
     t: { es: "Instalar dual track en un equipo de producto", en: "Bringing dual-track to a product team" },
     d: { es: "Plan anual de UX para una cadena de gimnasios: más de 40 pruebas de usabilidad con vendedores y líderes, homes por rol implementadas y una hoja de ruta con ResearchOps.", en: "Annual UX plan for a gym chain: 40+ usability tests with sales staff and leaders, role-based home screens shipped and a roadmap including ResearchOps." } },
-  { era: "sh", year: "2024", cat: "eva", country: { es: "México", en: "Mexico" },
+  { era: "sh", year: "2024", cat: "exp", country: { es: "México", en: "Mexico" },
     t: { es: "Lo que los tickets de soporte dicen de la usabilidad", en: "What support tickets say about usability" },
     d: { es: "Dos meses de tickets agrupados por tema más una evaluación heurística de una plataforma de RR.HH. y hiring. El acceso era el problema creciente; el recupero de credenciales pasó a la hoja de ruta.", en: "Two months of tickets grouped by theme plus a heuristic evaluation of an HR and hiring platform. Access was the growing issue; credential recovery went onto the roadmap." } },
   { era: "cpg", year: "2023", cat: "est", country: { es: "Brasil", en: "Brazil" },
@@ -592,7 +667,7 @@ const ARCHIVE = [
   { era: "cpg", year: "2023", cat: "est", country: { es: "Brasil, Colombia y Guatemala", en: "Brazil, Colombia and Guatemala" },
     t: { es: "Buscando la promoción ideal", en: "Looking for the ideal promotion" },
     d: { es: "12 entrevistas, 900 encuestas y un conjoint para entender el rol de premios y mecánicas, y dar criterios concretos para las siguientes promociones regionales.", en: "12 interviews, 900 surveys and a conjoint analysis to understand the role of prizes and mechanics, and set concrete criteria for future regional promotions." } },
-  { era: "cpg", year: "2022", cat: "seg", country: { es: "Perú y Ecuador", en: "Peru and Ecuador" },
+  { era: "cpg", year: "2022", cat: "est", country: { es: "Perú y Ecuador", en: "Peru and Ecuador" },
     t: { es: "Un snack con raíces: el plátano en la región andina", en: "A snack with roots: plantain in the Andes" },
     d: { es: "16 entrevistas y 800 encuestas. El vínculo cambia entre la sierra (más funcional) y la costa (más emocional), y explica la baja recordación de las marcas empaquetadas.", en: "16 interviews and 800 surveys. The bond shifts between the highlands (more functional) and the coast (more emotional), explaining low recall of packaged brands." } }
 ];
@@ -607,43 +682,43 @@ const ERAS = {
 <script>
 {
 const T = {
-  es: { role:"Research con mirada antropológica", n1:"Casos", n2:"Enfoque", n3:"Laboratorio", n4:"Sobre mí",
+  es: { role:"Research + antropología", n1:"Casos", n2:"Enfoque", n3:"Laboratorio", n4:"Sobre mí",
     h1a:"Ayudo a negocios y marcas a entender a sus clientes", h1c:"a través del comportamiento humano.",
     hp:"Research cuantitativo y cualitativo para que la propuesta de valor de tu negocio, marca y productos esté centrada en tus clientes.",
     cta1:"Escribime", cv:"CV", mn:"Menú", k1:"Enfoque", w0:"Maneras en que te puedo ayudar",
-    w1t:"Dónde está la oportunidad", w1:"Mercado, cultura, segmentación y tendencias para entender dónde jugar antes de diseñar.",
-    w2t:"Qué construir y cómo funciona", w2:"Discovery, tests de concepto, usabilidad y arquitectura de información, codo a codo con producto y diseño.",
-    w3t:"Qué dicen los datos y por qué", w3:"Combinación de datos comportamentales con datos declarativos para tener una visión holística del problema.",
+    w1t:"Dónde está la oportunidad", w1:"Foundational research, market fit, cultura, segmentación y tendencias para decidir dónde jugar y a quién hablarle antes de diseñar.",
+    w2t:"Qué y cómo construir", w2:"Product discovery research, tests de concepto, usabilidad y priorización con evidencia, codo a codo con producto y diseño.",
+    w3t:"Cómo se usa lo construido", w3:"Experience evaluative research, journey maps, blueprints, métricas de satisfacción y datos de comportamiento para entender el porqué detrás de cada movimiento.",
     k2:"Casos", cs:"Casos seleccionados", csl:"Seleccioná el caso que más te interese.",
-    ar:"Más trabajo", all:"Todos", read:"Ver caso →", k3:"Cómo trabajo", pr:"Del problema de negocio a la decisión",
+    ar:"Más trabajo", all:"Destacados", read:"Ver caso →", k3:"Cómo trabajo", pr:"Del problema de negocio a la decisión",
     k4:"Laboratorio", lb:"Un agente de análisis entrenado con metodología",
-    lbp:"Armé un agente en Gemini cargándole manuales de metodología y de análisis, para que pudiera interpretar bien hallazgos sencillos. Me ayuda a bajar las primeras instancias de un análisis; la lectura de fondo y las conclusiones siguen siendo mías.",
-    k5:"Sobre mí", ab:"Martín Zlotnik", abp:"<p>Siempre me atrajo el porqué detrás de lo que hace la gente: por qué confía en un producto y no en otro, por qué deja de usar una app que antes le encantaba, por qué el dinero significa algo distinto según quién lo tenga. La antropología me enseñó a construir esas preguntas para obtener esas respuestas. El research y el trabajo de producto, a convertirlas en decisiones.</p><p>Mi último rol fue como Senior UX &amp; Strategic Researcher en un gran grupo latinoamericano de banca, fintech, delivery, retail y turismo. En el último tramo me acerqué al lado de producto y datos: métricas de salud de clientes, segmentación comportamental y análisis de churn, para ayudar a los equipos a entender no solo qué dicen los números, sino qué pasa detrás de ellos. Antes estuve haciendo research para una software factory y para una agencia con clientes de consumo masivo.</p><p>Soy antropólogo social y cultural, egresado de la UBA. Hice cursos y capacitaciones en estadística aplicada, UX Research y UX Design.</p><p>Hoy estoy abierto a roles en research, estrategia de producto o product insights, y a conversar con equipos que quieran entender mejor a sus usuarios.</p>",
+    lbp:"Armé un agente en Gemini cargándole manuales de metodología y de análisis, para que pudiera interpretar bien hallazgos sencillos. Me ayuda a bajar las primeras instancias de un análisis; la lectura de fondo y las conclusiones siguen siendo mías. Es mi forma de hacer fast paced research: integrar IA para ganar velocidad sin perder rigor.", lbk:"Fast paced research",
+    k5:"Sobre mí", ab:"Martín Zlotnik", abp:"<p>Siempre me atrajo el porqué detrás de lo que hace la gente: por qué confía en un producto y no en otro, por qué deja de usar una app que antes le encantaba, por qué el dinero significa algo distinto según quién lo tenga. La antropología me enseñó a construir esas preguntas para obtener esas respuestas. El research y el trabajo de producto, a convertirlas en decisiones.</p><p>Mi último rol fue como Senior UX &amp; Strategic Researcher en un gran grupo latinoamericano de banca, fintech, delivery, retail y turismo. En el último tramo me acerqué al lado de producto y datos: métricas de salud de clientes, segmentación comportamental y análisis de churn, para ayudar a los equipos a entender no solo qué dicen los números, sino qué pasa detrás de ellos. Antes estuve haciendo research para una software factory y para una agencia con clientes de consumo masivo.</p><p>Soy antropólogo social y cultural, egresado de la UBA. Hice cursos y capacitaciones en estadística aplicada, UX Research y UX Design.</p>",
     k6:"Contacto", ct:"Las mejores decisiones empiezan por una buena pregunta.", ct2:"Hablemos.", cp:"Copiar mail", copied:"Copiado", cv2:"Descargar CV",
     nt:"Los casos completos, con entregables, están disponibles a pedido.", ft:"© 2026 Martín Zlotnik · Buenos Aires",
     back:"← Volver a los casos", next:"Siguiente:", m1:"Año", m2:"País", m3:"Industria", m4:"Rol", mm:"Método",
-    "c-est":"Estrategia y mercado","c-dis":"Discovery y producto","c-met":"Métricas y datos",s1:"El desafío", s2:"Qué hicimos", s3:"Lo que muestran los datos", s4:"Qué encontramos", s5:"Impacto", s6:"En sus palabras" },
-  en: { role:"Research with an anthropologist’s eye", n1:"Work", n2:"Approach", n3:"Lab", n4:"About",
+    "c-est":"Estrategia","c-dis":"Producto","c-met":"Experiencia",s1:"El desafío", s2:"Qué hicimos", s3:"Lo que muestran los datos", s4:"Qué encontramos", s5:"Impacto", s6:"En sus palabras" },
+  en: { role:"Research + anthropology", n1:"Work", n2:"Approach", n3:"Lab", n4:"About",
     h1a:"Helping businesses make sense of their clients", h1c:"by understanding human behaviour.",
     hp:"Quantitative and qualitative research so the value proposition of your business, brand and products is centred on your customers.",
     cta1:"Get in touch", cv:"Résumé", mn:"Menu", k1:"Approach", w0:"Ways I can help",
-    w1t:"Where the opportunity is", w1:"Markets, culture, segmentation and trends to understand where to play before designing.",
-    w2t:"What to build and how it works", w2:"Discovery, concept tests, usability and information architecture, side by side with product and design.",
-    w3t:"What the data says, and why", w3:"Combining behavioural and self-reported data to get a holistic view of the problem.",
+    w1t:"Where the opportunity is", w1:"Foundational research, market fit, culture, segmentation and trends to decide where to play and who to talk to before designing.",
+    w2t:"What to build, and how", w2:"Product discovery research, concept tests, usability and evidence-based prioritisation, side by side with product and design.",
+    w3t:"How what we built gets used", w3:"Experience evaluative research, journey maps, blueprints, satisfaction metrics and behavioural data to understand the why behind every move.",
     k2:"Work", cs:"Selected case studies", csl:"Pick the case that interests you most.",
-    ar:"More work", all:"All", read:"Read case →", k3:"How I work", pr:"From business problem to decision",
+    ar:"More work", all:"Featured", read:"Read case →", k3:"How I work", pr:"From business problem to decision",
     k4:"Lab", lb:"An analysis agent trained on methodology",
-    lbp:"I built an agent in Gemini, loading it with methodology and analysis manuals so it could correctly interpret straightforward findings. It helps me get the first passes of an analysis done; the deeper reading and the conclusions are still mine.",
-    k5:"About", ab:"Martín Zlotnik", abp:"<p>I’ve always been drawn to the “why” behind what people do: why they trust one product and not another, why they stop using an app they once loved, why money means something different depending on who holds it. Anthropology taught me to build those questions to get to those answers. Research and product work taught me to turn them into decisions.</p><p>Most recently, I was a Senior UX &amp; Strategic Researcher at a large Latin American group spanning banking, fintech, delivery, retail and travel. In my last stretch there, I moved closer to product and data: customer health metrics, behavioural segmentation and churn analysis, helping product teams understand not just what the numbers were saying, but what was happening behind them. Before that, I did research for a software factory and for an agency with consumer goods clients.</p><p>I’m a social and cultural anthropologist, graduated from the University of Buenos Aires. I’ve taken courses and training in applied statistics, UX research and UX design.</p><p>I’m open to roles in research, product strategy or product insights, and to conversations with teams who want to understand their users more deeply.</p>",
+    lbp:"I built an agent in Gemini, loading it with methodology and analysis manuals so it could correctly interpret straightforward findings. It helps me get the first passes of an analysis done; the deeper reading and the conclusions are still mine. It’s my take on fast paced research: bringing AI in to gain speed without losing rigour.", lbk:"Fast paced research",
+    k5:"About", ab:"Martín Zlotnik", abp:"<p>I’ve always been drawn to the “why” behind what people do: why they trust one product and not another, why they stop using an app they once loved, why money means something different depending on who holds it. Anthropology taught me to build those questions to get to those answers. Research and product work taught me to turn them into decisions.</p><p>Most recently, I was a Senior UX &amp; Strategic Researcher at a large Latin American group spanning banking, fintech, delivery, retail and travel. In my last stretch there, I moved closer to product and data: customer health metrics, behavioural segmentation and churn analysis, helping product teams understand not just what the numbers were saying, but what was happening behind them. Before that, I did research for a software factory and for an agency with consumer goods clients.</p><p>I’m a social and cultural anthropologist, graduated from the University of Buenos Aires. I’ve taken courses and training in applied statistics, UX research and UX design.</p>",
     k6:"Contact", ct:"The best decisions start with a good question.", ct2:"Let’s talk.", cp:"Copy email", copied:"Copied", cv2:"Download résumé",
     nt:"Full case studies, with deliverables, are available on request.", ft:"© 2026 Martín Zlotnik · Buenos Aires",
     back:"← Back to work", next:"Next:", m1:"Year", m2:"Country", m3:"Industry", m4:"Role", mm:"Method",
-    "c-est":"Strategy & market","c-dis":"Discovery & product","c-met":"Metrics & data",s1:"The challenge", s2:"What we did", s3:"What the data shows", s4:"What we found", s5:"Impact", s6:"In their words" }
+    "c-est":"Strategy","c-dis":"Product","c-met":"Experience",s1:"The challenge", s2:"What we did", s3:"What the data shows", s4:"What we found", s5:"Impact", s6:"In their words" }
 };
 const FACTS = { es:[["8","países"],["+20","estudios"],["+10","industrias"],["B2C y B2B",""]], en:[["8","countries"],["20+","studies"],["10+","industries"],["B2C and B2B",""]] };
 const STEPS = {
-  es:[["Empezar por la decisión","Cuáles son las preguntas que tiene el negocio y qué decisión tiene que tomar con el estudio."],["El método sigue a la pregunta","Etnografía, encuesta, test o datos: lo que la pregunta pida, con integralidad metodológica."],["El campo de triangulación","Lo que la gente dice, lo que hace y lo que muestran los datos, leídos juntos."],["Activación y seguimiento","Hallazgos con dueño, recomendaciones accionables y seguimiento de lo que pasa después."]],
-  en:[["Start with the decision","What questions the business has, and what decision it needs to make with the study."],["Method follows the question","Ethnography, survey, test or data: whatever the question needs, with methodological integrity."],["Triangulating in the field","What people say, what they do and what the data shows, read together."],["Activation and follow-up","Findings with owners, actionable recommendations and follow-up on what happens next."]]
+  es:[["Empezar por la decisión","Traducir las preguntas que tiene el negocio para que respondan a las decisiones que quiere tomar con el estudio."],["El método sigue a la pregunta","Etnografía, encuesta, test o datos: lo que la pregunta pida, con integralidad metodológica."],["El campo de triangulación","Lo que la gente dice, lo que hace y lo que muestran los datos, leídos juntos."],["Activación y seguimiento","Hallazgos con dueño, recomendaciones accionables y seguimiento de lo que pasa después."]],
+  en:[["Start with the decision","Translating the business’s questions so they answer the decisions it wants to make with the study."],["Method follows the question","Ethnography, survey, test or data: whatever the question needs, with methodological integrity."],["Triangulating in the field","What people say, what they do and what the data shows, read together."],["Activation and follow-up","Findings with owners, actionable recommendations and follow-up on what happens next."]]
 };
 const FLOW = {
   es:[["Entrada","Manuales de metodología y de análisis"],["Agente en Gemini","Primera lectura: ordena respuestas abiertas, agrupa temas y propone hallazgos sencillos"],["Yo","Valido, profundizo e interpreto: la conclusión es humana"]],
@@ -665,7 +740,7 @@ const VIS = {
   turismo(){
     const s = L==="es" ? [["Constitutivo",30,"Distinción e identidad","Curadora experta","seg"],["Ritual",32,"Conexión y pertenencia","Organizadora del grupo","met"],["Oportunidad",22,"Seguridad: \"hice bien\"","Disparadora de ofertas","dis"],["Circunstancial",15,"Previsibilidad","Solucionadora operativa","eva"]]
       : [["Self-defining",30,"Distinction and identity","Expert curator","seg"],["Ritual",32,"Connection and belonging","Group organiser","met"],["Opportunity",22,"Security: \"I made a smart call\"","Deal trigger","dis"],["Circumstantial",15,"Predictability","Operational fixer","eva"]];
-    return `<h3>${L==="es"?"Cuatro escenarios de viaje":"Four travel scenarios"}</h3><p class="sub">${L==="es"?"Peso de cada escenario en la encuesta (n=292) y rol que le pide a la agencia":"Share of each scenario in the survey (n=292) and the role it asks of the agency"}</p>
+    return `<h3>${L==="es"?"Cuatro escenarios de viaje":"Four travel scenarios"}</h3><p class="sub">${L==="es"?"Peso de cada escenario en la encuesta (n=478) y rol que le pide a la agencia":"Share of each scenario in the survey (n=478) and the role it asks of the agency"}</p>
     <div class="stack">${s.map(r=>`<div class="p-${r[4]}" style="flex:${r[1]}">${r[1]}%</div>`).join("")}</div>
     <div class="sc">${s.map(r=>`<div class="p-${r[4]}"><strong>${r[0]}</strong><b>${r[1]}%</b>${r[2]}<br><br>${L==="es"?"Rol de la agencia":"Agency role"}: ${r[3]}</div>`).join("")}</div>`;
   },
@@ -734,12 +809,12 @@ function renderHome(){
   $("#facts").innerHTML = FACTS[L].map(f => `<span><b>${f[0]}</b> ${f[1]}</span>`).join("");
   const used = Object.keys(CATS).filter(k => CASES.some(c=>c.cats.includes(k)) || ARCHIVE.some(a=>a.cat===k));
   $("#filters").innerHTML = `<button class="pill all" data-f="all" aria-pressed="${F==="all"}">${t("all")}</button>` + used.map(k => `<button class="pill p-${k}" data-f="${k}" aria-pressed="${F===k}">${x(CATS[k])}</button>`).join("");
-  $("#grid").innerHTML = CASES.map(c => `<a class="card${(F==="all"?!c.top:!c.cats.includes(F))?" hide":""}" href="#caso-${c.id}">
+  $("#grid").innerHTML = [...CASES].sort((p,q)=>(q.top?1:0)-(p.top?1:0)).map(c => `<a class="card${(F!=="all"&&!c.cats.includes(F))?" hide":""}" href="#caso-${c.id}">
     <div class="top" style="--img:url(${c.img})"><b>${c.stat.n}</b><span>${x(c.stat.l)}</span></div>
-    <div class="bd"><span class="meta">${c.year} · ${x(c.country)} · ${x(c.industry)}</span><h3>${x(c.t)}</h3><p>${x(c.hook)}</p>
-    <div class="tags">${c.cats.map(pc).join("")}</div><span class="more">${t("read")}</span></div></a>`).join("");
+    <div class="bd"><span class="meta">${c.year} · ${x(c.country)} · ${x(c.industry)}</span><h3>${x(c.t)}</h3><p class="cq">${x(c.q||c.hook)}</p>
+    <div class="cfoot"><div class="tags">${c.cats.map(pc).join("")}</div><span class="more">${t("read")}</span></div></div></a>`).join("");
   $("#archive").innerHTML = Object.keys(ERAS).map(e => {
-    const rows = ARCHIVE.filter(a => a.era===e && (F==="all"||a.cat===F));
+    const rows = ARCHIVE.filter(a => a.era===e);
     return rows.length ? `<div class="era"><h4>${x(ERAS[e])}</h4>${rows.map(a => `<div class="row"><span class="y">${a.year}<br>${x(a.country)}</span><div><strong>${x(a.t)}</strong><p>${x(a.d)}</p></div>${pc(a.cat)}</div>`).join("")}</div>` : "";
   }).join("");
   $("#steps").innerHTML = STEPS[L].map(s => `<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
@@ -751,14 +826,14 @@ function renderCase(id){
   const n = CASES[(i+1)%CASES.length], k = c.cats[0];
   $("#case").innerHTML = `<a class="back" href="#casos">${t("back")}</a>
   <div class="ch"><div><div class="tags">${c.cats.map(pc).join("")}</div><h1>${x(c.t)}</h1><p class="hk">${x(c.hook)}</p></div>
-  <div class="bigstat p-${k}"><b>${c.stat.n}</b><span>${x(c.stat.l)}</span></div></div>
+  <div class="bigstat p-est"><b>${c.stat.n}</b><span>${x(c.stat.l)}</span></div></div>
   <div class="mgrid"><div><small>${t("m1")}</small>${c.year}</div><div><small>${t("m2")}</small>${x(c.country)}</div><div><small>${t("m3")}</small>${x(c.industry)}</div><div><small>${t("m4")}</small>${x(c.role)}</div></div>
   <section class="sec"><h2>${t("s1")}</h2><div><p>${x(c.challenge)}</p></div></section>
+  <section class="sec"><h2>${t("s4")}</h2><div class="finds">${c.found[L].map(f=>`<div class="find"><h3>${f[0]}</h3><p>${f[1]}</p></div>`).join("")}</div></section>
+  <section class="sec"><h2>${t("s5")}</h2><div class="impact p-est"><p>${x(c.impact)}</p></div></section>
   <section class="sec"><h2>${t("s2")}</h2><div><p class="meta" style="margin:0 0 16px">${t("mm")}: ${x(c.method)}</p><ol class="did">${c.did[L].map(d=>`<li><span>${d}</span></li>`).join("")}</ol></div></section>
   <section class="sec"><h2>${t("s3")}</h2><div class="vis">${VIS[c.vis]()}</div></section>
-  <section class="sec"><h2>${t("s4")}</h2><div class="finds">${c.found[L].map(f=>`<div class="find"><h3>${f[0]}</h3><p>${f[1]}</p></div>`).join("")}</div></section>
   ${c.quote?`<section class="sec"><h2>${t("s6")}</h2><div><blockquote class="quote">“${x(c.quote)}”</blockquote><cite>${x(c.qby)}</cite></div></section>`:""}
-  <section class="sec"><h2>${t("s5")}</h2><div class="impact p-${k}"><p>${x(c.impact)}</p></div></section>
   <div class="nextc"><a class="btn" href="#casos">${t("back")}</a><a class="btn solid" href="#caso-${n.id}">${t("next")} ${x(n.t)} →</a></div>`;
 }
 function route(){
@@ -778,14 +853,14 @@ document.addEventListener("click", e => {
   if(fb){ F = fb.dataset.f; renderHome(); return; }
   if(e.target.closest("#copy")){
     const b = $("#copy");
-    navigator.clipboard?.writeText($("#mail").textContent).then(()=>{ b.textContent = t("copied"); setTimeout(()=>b.textContent=t("cp"),1800); }).catch(()=>{});
+    const M="tinchozlotnik@gmail.com"; (navigator.clipboard? navigator.clipboard.writeText(M):Promise.reject()).then(()=>{ b.textContent = t("copied"); setTimeout(()=>b.textContent=t("cp"),1800); }).catch(()=>{ location.href="mailto:"+M; });
   }
 });
 window.addEventListener("hashchange", route);
 const vid=$("#bgv"), hw=$("#top"), hd=document.querySelector("header");
 
 
-function hdr(){ const onHome=!$("#home").classList.contains("hide"); const solid=!onHome || scrollY > hw.offsetHeight+$("#enfoque").offsetHeight-90; hd.classList.toggle("solid", solid); hd.classList.toggle("mid", !solid && scrollY>12); }
+function hdr(){ const onHome=!$("#home").classList.contains("hide"); const sb=$("#sobre"), overS=onHome && sb && sb.getBoundingClientRect().top < 90; const solid=!onHome || (scrollY > hw.offsetHeight+$("#enfoque").offsetHeight-90 && !overS); hd.classList.toggle("solid", solid); hd.classList.toggle("mid", !solid && scrollY>12 && !overS); const ab=$("#sobre .about"); hd.classList.toggle("glass", !!(overS && ab && ab.getBoundingClientRect().top < hd.offsetHeight)); }
 addEventListener("scroll",hdr,{passive:true});
 $("#menu").addEventListener("click",()=>{ const o=hd.classList.toggle("open"); $("#menu").setAttribute("aria-expanded",o); });
 $("#nav").addEventListener("click",e=>{ if(e.target.closest("a")){ hd.classList.remove("open"); $("#menu").setAttribute("aria-expanded",false); } }); addEventListener("hashchange",()=>setTimeout(hdr,0)); hdr();
@@ -793,31 +868,74 @@ if(matchMedia("(prefers-reduced-motion: reduce)").matches && vid) vid.pause();
 all();
 }
 
-/* ESTELA (trail del mouse): para quitarlo, borrar este bloque */
+
+
+
+/* CARRUSEL DE CASOS */
+(function(){
+  const $=s=>document.querySelector(s);
+  const car=$("#car"), g=$("#grid"), dots=$("#cdots"), nav=car&&car.querySelector(".carnav"); if(!g) return;
+  const DUR=5000, still=matchMedia("(prefers-reduced-motion: reduce)").matches; if(still) car.classList.add("still");
+  car.style.setProperty("--cdur",DUR+"ms");
+  let timer=null, hover=false, visible=true, user=false;
+  const cards=()=>[...g.children].filter(c=>!c.classList.contains("hide"));
+  const step=()=>{ const c=cards()[0]; return c? c.getBoundingClientRect().width+20 : g.clientWidth; };
+  const per=()=>Math.max(1,Math.round(g.clientWidth/step()));
+  const pages=()=>Math.max(1,Math.ceil(cards().length/per()));
+  const cur=()=>Math.min(pages()-1,Math.round(g.scrollLeft/(step()*per())));
+  function go(i){ const n=pages(); i=(i+n)%n; g.scrollTo({left:i*step()*per(),behavior:still?"auto":"smooth"}); mark(i); }
+  function mark(i){ [...dots.children].forEach((d,k)=>{ d.removeAttribute("aria-current"); if(k===i){ void d.offsetWidth; d.setAttribute("aria-current","true"); } }); }
+  function build(){ const n=pages(); dots.innerHTML=Array.from({length:n},(_,k)=>`<button aria-label="${k+1}"></button>`).join(""); nav.classList.toggle("one",n<2); g.scrollLeft=0; mark(0); restart(); }
+  function stop(){ clearInterval(timer); timer=null; }
+  function restart(){ stop(); if(still||pages()<2) return; car.classList.toggle("paused",hover||!visible); if(hover||!visible) return; timer=setInterval(()=>go(cur()+1),DUR); }
+  dots.addEventListener("click",e=>{ const b=e.target.closest("button"); if(b){ go([...dots.children].indexOf(b)); restart(); } });
+  $("#cprev").onclick=()=>{ go(cur()-1); restart(); };
+  $("#cnext").onclick=()=>{ go(cur()+1); restart(); };
+  car.addEventListener("mouseenter",()=>{hover=true;restart();}); car.addEventListener("mouseleave",()=>{hover=false;restart();});
+  car.addEventListener("focusin",()=>{hover=true;restart();}); car.addEventListener("focusout",()=>{hover=false;restart();});
+  g.addEventListener("touchstart",()=>{hover=true;restart();},{passive:true}); g.addEventListener("touchend",()=>{ setTimeout(()=>{hover=false;restart();},4000); },{passive:true});
+  let st; g.addEventListener("scroll",()=>{ clearTimeout(st); st=setTimeout(()=>{ const i=cur(); const a=dots.querySelector("[aria-current]"); if(!a||[...dots.children].indexOf(a)!==i) { mark(i); restart(); } },120); },{passive:true});
+  if("IntersectionObserver" in window) new IntersectionObserver(es=>{ visible=es[0].isIntersecting; restart(); },{threshold:.35}).observe(car);
+  document.addEventListener("visibilitychange",()=>{ visible=!document.hidden; restart(); });
+  new MutationObserver(build).observe(g,{childList:true});
+  addEventListener("resize",()=>{ clearTimeout(build.t); build.t=setTimeout(build,200); });
+  build();
+})();
+
+/* FUEGO EN EL MOUSE: para quitarlo, borrar este bloque */
 (function(){
   if(!matchMedia("(hover:hover) and (pointer:fine)").matches || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const cv=document.createElement("canvas"); cv.id="trail"; cv.setAttribute("aria-hidden","true");
-  cv.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60";
+  const cv=document.createElement("canvas"); cv.setAttribute("aria-hidden","true");
+  cv.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:61";
   document.body.appendChild(cv);
-  const cx=cv.getContext("2d"); let W,H,dpr; const pts=[]; const LIFE=600; let run=false;
+  const cx=cv.getContext("2d"); let W,H,dpr, P=[], run=false, lx=null, ly=null;
   function size(){ dpr=Math.min(devicePixelRatio||1,2); W=innerWidth; H=innerHeight; cv.width=W*dpr; cv.height=H*dpr; cx.setTransform(dpr,0,0,dpr,0,0); }
   size(); addEventListener("resize",size);
-  const darks=[document.querySelector(".herowrap"),document.querySelector("#enfoque")].filter(Boolean);
-  function onDark(x,y){ return darks.some(el=>{ const r=el.getBoundingClientRect(); return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom; }); }
-  addEventListener("mousemove",e=>{ pts.push({x:e.clientX,y:e.clientY,t:performance.now()}); if(!run){ run=true; requestAnimationFrame(draw); } },{passive:true});
+  const darks=()=>[document.querySelector(".herowrap"),document.querySelector("#enfoque"),document.querySelector("#sobre")].filter(Boolean);
+  const onDark=(x,y)=>darks().some(el=>{const r=el.getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom;});
+  addEventListener("mousemove",e=>{
+    const x=e.clientX,y=e.clientY, d=lx===null?0:Math.hypot(x-lx,y-ly); lx=x; ly=y;
+    const n=Math.min(4,1+Math.floor(d/8));
+    for(let i=0;i<n&&P.length<260;i++) P.push({x:x+(Math.random()-.5)*6,y:y+(Math.random()-.5)*6,vx:(Math.random()-.5)*.7,vy:-(.5+Math.random()*1.3),r:1.5+Math.random()*3.2,t:performance.now(),life:450+Math.random()*450,dark:onDark(x,y)});
+    if(!run){run=true;requestAnimationFrame(draw);}
+  },{passive:true});
+  function col(k){ // k: 0 nuevo -> 1 viejo
+    if(k<.35){const f=k/.35;return [255,Math.round(225-90*f),Math.round(120-90*f)];}
+    const f=(k-.35)/.65; return [Math.round(255-60*f),Math.round(135-95*f),Math.round(30-20*f)];
+  }
   function draw(now){
-    while(pts.length&&now-pts[0].t>LIFE) pts.shift();
     cx.clearRect(0,0,W,H);
-    if(pts.length>1){
-      const last=pts[pts.length-1], col=onDark(last.x,last.y)?"232,168,124":"160,82,45";
-      cx.lineCap="round"; cx.lineJoin="round";
-      for(let i=1;i<pts.length;i++){
-        const a=pts[i-1], b=pts[i], k=1-(now-b.t)/LIFE;
-        cx.strokeStyle=`rgba(${col},${(k*.55).toFixed(3)})`; cx.lineWidth=.5+k*3.5;
-        cx.beginPath(); cx.moveTo(a.x,a.y); cx.lineTo(b.x,b.y); cx.stroke();
-      }
+    P=P.filter(p=>now-p.t<p.life);
+    for(const p of P){
+      const k=(now-p.t)/p.life; p.x+=p.vx+Math.sin((now+p.t)/90)*.25; p.y+=p.vy; p.vy*=.985;
+      const [r,g,b]=col(k), a=(1-k)*(p.dark?.95:.8), rad=p.r*(1-k*.6)*(.85+Math.random()*.3);
+      cx.globalCompositeOperation=p.dark?"lighter":"source-over";
+      const gr=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,rad*2.2);
+      gr.addColorStop(0,`rgba(${r},${g},${b},${a})`); gr.addColorStop(1,`rgba(${r},${g},${b},0)`);
+      cx.fillStyle=gr; cx.beginPath(); cx.arc(p.x,p.y,rad*2.2,0,6.283); cx.fill();
     }
-    if(pts.length) requestAnimationFrame(draw); else { run=false; cx.clearRect(0,0,W,H); }
+    cx.globalCompositeOperation="source-over";
+    if(P.length) requestAnimationFrame(draw); else {run=false;cx.clearRect(0,0,W,H);}
   }
 })();
 
